@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { useState } from 'react';
 
 import menuIcon from '@/assets/icons/navigation/icon-menu.svg';
 import searchIcon from '@/assets/icons/navigation/icon-search.svg';
@@ -20,20 +21,31 @@ const navbarStyles = {
   chatIcon: 'absolute bottom-8 right-3',
 };
 
-const MobileMenu = () => {
+interface MenuProps {
+  linkArr: string[];
+  handleCloseMenu: () => void;
+}
+
+const MobileMenu = (props: MenuProps) => {
+  const { linkArr, handleCloseMenu } = props;
+
   return (
     <div className={navbarStyles.menu}>
       <div className={navbarStyles.menu_header}>
         <h1 className={navbarStyles.logo}>artsy.</h1>
 
-        <button aria-label='click to close mobile menu' aria-pressed='false'>
+        <button
+          aria-label='click to close mobile menu'
+          aria-pressed='false'
+          onClick={handleCloseMenu}
+        >
           <img src={closeIcon} role='presentation' />
         </button>
       </div>
 
       <nav>
         <ul>
-          {navLinks.map((navLink) => (
+          {linkArr.map((navLink) => (
             <li
               key={navLink}
               className={navbarStyles.navLink}
@@ -53,10 +65,19 @@ const MobileMenu = () => {
 };
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleOpenMenu = () => setIsMenuOpen(true);
+  const handleCloseMenu = () => setIsMenuOpen(false);
+
   return (
     <>
       <header className={navbarStyles.header}>
-        <button aria-label='click to open mobile menu' aria-pressed='false'>
+        <button
+          aria-label='click to open mobile menu'
+          aria-pressed={isMenuOpen ? 'true' : 'false'}
+          onClick={handleOpenMenu}
+        >
           <img src={menuIcon} role='presentation' />
         </button>
 
@@ -87,7 +108,9 @@ const Navbar = () => {
         </div>
       </header>
 
-      <MobileMenu />
+      {isMenuOpen ? (
+        <MobileMenu handleCloseMenu={handleCloseMenu} linkArr={navLinks} />
+      ) : null}
 
       <Outlet />
     </>
