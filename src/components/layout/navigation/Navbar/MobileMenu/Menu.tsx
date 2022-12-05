@@ -1,8 +1,10 @@
+import { NavLink } from 'react-router-dom';
+
 import closeIcon from '@/assets/icons/navigation/icon-close.svg';
 import chatIcon from '@/assets/icons/navigation/icon-chat.svg';
 
 interface MenuProps {
-  linkArr: string[];
+  linkArr: { page: string; url: string }[];
   handleCloseMenu: () => void;
   styles: {
     header: string;
@@ -36,13 +38,14 @@ const Menu = (props: MenuProps) => {
 
       <nav>
         <ul>
-          {linkArr.map((navLink) => (
+          {linkArr.map((link) => (
             <li
-              key={navLink}
+              key={link.url}
               className={styles.navLink}
-              aria-label={`click to go to ${navLink} page`}
+              aria-label={`click to go to ${link.page} page`}
+              onClick={handleCloseMenu}
             >
-              {navLink}
+              <NavLink to={link.url}>{link.page}</NavLink>
             </li>
           ))}
         </ul>

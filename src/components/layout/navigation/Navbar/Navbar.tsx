@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 
 import bellIcon from '@/assets/icons/navigation/icon-bell.svg';
@@ -7,7 +7,12 @@ import menuIcon from '@/assets/icons/navigation/icon-menu.svg';
 import searchIcon from '@/assets/icons/navigation/icon-search.svg';
 import Menu from './MobileMenu/Menu';
 
-const navLinks = ['home', 'auctions', 'marketplace', 'drops'];
+const navLinks = [
+  { page: 'home', url: '/' },
+  { page: 'auctions', url: '/auctions' },
+  { page: 'marketplace', url: '/marketplace' },
+  { page: 'drops', url: '/drops' },
+];
 
 const navbarStyles = {
   header: 'flex items-center justify-between py-7 lg:py-12 relative',
@@ -48,11 +53,11 @@ const Navbar = () => {
           <ul className='flex items-center gap-[47px]'>
             {navLinks.map((navLink) => (
               <li
-                key={navLink}
+                key={navLink.url}
                 aria-label={`click to go to ${navLink} page`}
                 className='capitalize font-satoshi text-2xl'
               >
-                {navLink}
+                <NavLink to={navLink.url}>{navLink.page}</NavLink>
               </li>
             ))}
           </ul>
