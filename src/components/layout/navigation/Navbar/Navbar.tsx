@@ -3,10 +3,9 @@ import { useState } from 'react';
 
 import bellIcon from '@/assets/icons/navigation/icon-bell.svg';
 import cartIcon from '@/assets/icons/navigation/icon-cart.svg';
-import closeIcon from '@/assets/icons/navigation/icon-close.svg';
-import chatIcon from '@/assets/icons/navigation/icon-chat.svg';
 import menuIcon from '@/assets/icons/navigation/icon-menu.svg';
 import searchIcon from '@/assets/icons/navigation/icon-search.svg';
+import Menu from './MobileMenu/Menu';
 
 const navLinks = ['home', 'auctions', 'marketplace', 'drops'];
 
@@ -21,49 +20,6 @@ const navbarStyles = {
   navLink:
     'text-dark_gray_clr-200 font-satoshi font-medium text-2xl capitalize my-[50px]',
   chatIcon: 'absolute bottom-8 right-3',
-};
-
-interface MenuProps {
-  linkArr: string[];
-  handleCloseMenu: () => void;
-}
-
-const MobileMenu = (props: MenuProps) => {
-  const { linkArr, handleCloseMenu } = props;
-
-  return (
-    <div className={navbarStyles.menu}>
-      <div className={navbarStyles.menu_header}>
-        <h1 className={navbarStyles.logo}>artsy.</h1>
-
-        <button
-          aria-label='click to close mobile menu'
-          aria-pressed='false'
-          onClick={handleCloseMenu}
-        >
-          <img src={closeIcon} role='presentation' />
-        </button>
-      </div>
-
-      <nav>
-        <ul>
-          {linkArr.map((navLink) => (
-            <li
-              key={navLink}
-              className={navbarStyles.navLink}
-              aria-label={`click to go to ${navLink} page`}
-            >
-              {navLink}
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <button className={navbarStyles.chatIcon} aria-pressed='false'>
-        <img src={chatIcon} role='presentation' />
-      </button>
-    </div>
-  );
 };
 
 const Navbar = () => {
@@ -103,6 +59,8 @@ const Navbar = () => {
         </nav>
 
         <div className='flex items-center'>
+          {/* searchIcon */}
+
           <button
             aria-label='click to search through website'
             aria-pressed='false'
@@ -113,6 +71,8 @@ const Navbar = () => {
               className={navbarStyles.searchIcon}
             />
           </button>
+
+          {/* Cart Icon */}
 
           <button
             aria-label='click to open view products in cart'
@@ -126,6 +86,7 @@ const Navbar = () => {
           </button>
 
           {/* Bell Icon */}
+
           <button
             aria-label='click to open view notifications'
             aria-pressed='false'
@@ -141,7 +102,11 @@ const Navbar = () => {
       </header>
 
       {isMenuOpen ? (
-        <MobileMenu handleCloseMenu={handleCloseMenu} linkArr={navLinks} />
+        <Menu
+          handleCloseMenu={handleCloseMenu}
+          linkArr={navLinks}
+          styles={navbarStyles}
+        />
       ) : null}
 
       <Outlet />
