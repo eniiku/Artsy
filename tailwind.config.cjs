@@ -10,6 +10,7 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
         stix: ['STIX Two Text', 'serif'],
+        bellefair: ['Bellefair', 'serif'],
       },
       colors: {
         dark_gray_clr: {

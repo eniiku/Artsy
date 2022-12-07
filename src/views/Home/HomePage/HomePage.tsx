@@ -34,6 +34,7 @@ const HomePage = () => {
             className='relative'
           >
             <div className='h-[255px] bg-indigo-400'></div>
+
             <div
               className='absolute inset-0 z-30 bg-opacity-40 bg-black text-center'
               aria-hidden
@@ -53,6 +54,50 @@ const HomePage = () => {
           <div className='flex items-center gap-4 border-b border-b-black w-fit pr-3 pb-2 mb-8'>
             avatars
             <h3 className='font-satoshi font-medium'>64 major creators</h3>
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-label='showcase of featured auction event'
+        className='-mx-3 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] p-10 text-white overflow-hidden'
+      >
+        <div className='border border-black p-1 py-6 px-2'>
+          <div className='flex items-center gap-8 pr-8'>
+            <div
+              className='w-[16px] h-[16px] bg-white rounded-full'
+              aria-hidden
+            ></div>
+
+            <h3 className='font-bellefair text-xl'>
+              MONALISA REDEFINED IN STYLE.
+            </h3>
+          </div>
+
+          <div className='flex items-start gap-2 mt-4'>
+            <div className=' font-bellefair text-[40px]'>01</div>
+
+            <div>
+              <p className='font-poppins text-xs uppercase'>
+                Start on : 08:00 GTS . Monday
+              </p>
+
+              <p className='font-satoshi font-medium text-[10px] my-4'>
+                GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
+                INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
+                HIGHEST AND LOWEST BIDS.
+              </p>
+            </div>
+          </div>
+
+          <div className='flex items-center justify-end gap-8'>
+            <button className='font-satoshi text-sm underline underline-offset-2'>
+              See more
+            </button>
+
+            <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px]'>
+              Set a reminder
+            </button>
           </div>
         </div>
       </section>
