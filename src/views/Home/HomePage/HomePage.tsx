@@ -1,4 +1,5 @@
 import styles from '@/styles';
+import { Link } from '@/components/layout';
 
 const HomePage = () => {
   return (
@@ -58,6 +59,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Auction section */}
+
       <section
         aria-label='showcase of featured auction event'
         className='-mx-3 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] p-10 text-white overflow-hidden'
@@ -101,6 +104,19 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Navigation Links */}
+
+      <section
+        aria-label='navigation links to specific locations on website'
+        className='-mx-3 overflow-hidden border-t border-t-black mb-16'
+      >
+        <Link url='/marketplace'>Explore marketplace</Link>
+
+        <Link url='/auctions'>See auctions</Link>
+      </section>
+
+      {/* Top Creators section  */}
 
       <section
         aria-label='showcase of the best creators for the week'
