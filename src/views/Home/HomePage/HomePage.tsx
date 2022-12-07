@@ -1,5 +1,5 @@
 import styles from '@/styles';
-import { Link } from '@/components/layout';
+import { Link, Footer } from '@/components/layout';
 
 const HomePage = () => {
   return (
@@ -154,6 +154,10 @@ const HomePage = () => {
 
         <div className='absolute z-30 bottom-0 left-[40%] w-[40px] h-[150px] bg-black'></div>
       </section>
+
+      {/* Footer Section */}
+
+      <Footer />
     </div>
   );
 };
