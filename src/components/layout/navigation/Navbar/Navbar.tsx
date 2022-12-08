@@ -15,7 +15,8 @@ const navLinks = [
 ];
 
 const navbarStyles = {
-  header: 'flex items-center justify-between py-7 lg:py-12 relative',
+  header:
+    'flex items-center justify-between py-7 lg:py-12 relative px-3 lg:px-32',
   logo: 'font-stix font-bold text-2xl lg:text-[32px] uppercase text-dark text-dark_gray_clr-700',
   searchIcon: 'w-[28px] lg:w-[48px]',
   cartIcon: 'w-[31px] lg:w-[49px]',
