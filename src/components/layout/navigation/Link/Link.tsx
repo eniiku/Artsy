@@ -1,6 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import RightIcon from '../../../../assets/icons/chevron/icon-arrow-right-outlined.svg';
 
 interface LinkProps {
   children: string;
@@ -14,14 +15,21 @@ const Link = (props: LinkProps) => {
     <RouterLink to={url}>
       <div
         aria-label={`click to ${children}.`}
-        className='flex items-center justify-between border-b border-black px-2 py-4'
+        className='flex items-center justify-between border-b border-black px-2 py-4
+        lg:border-dark_gray_clr-200 lg:px-8'
       >
         <h3 className='font-satoshi font-medium text-2xl'>{children}</h3>
 
         <img
           src={arrowRightIcon}
           role='presentation'
-          className='w-[54px] mr-7'
+          className='w-[54px] mr-7 lg:hidden'
+        />
+
+        <img
+          src={RightIcon}
+          role='presentation'
+          className='hidden lg:block mr-44'
         />
       </div>
     </RouterLink>
