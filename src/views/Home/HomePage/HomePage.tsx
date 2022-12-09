@@ -1,4 +1,6 @@
 import styles from '@/styles';
+import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
+import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
 import { Link, Footer } from '@/components/layout';
 
 const HomePage = () => {
@@ -97,43 +99,90 @@ const HomePage = () => {
 
       <section
         aria-label='showcase of featured auction event'
-        className='-mx-3 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] p-10 text-white overflow-hidden'
+        className='-mx-3 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] p-10 text-white overflow-hidden
+          lg:-mx-24 lg:h-[780px] lg:px-20 lg:flex lg:flex-col lg:justify-evenly lg:gap-4'
       >
-        <div className='border border-black p-1 py-6 px-2'>
-          <div className='flex items-center gap-8 pr-8'>
-            <div
-              className='w-[16px] h-[16px] bg-white rounded-full'
-              aria-hidden
-            ></div>
+        <h1 className='hidden lg:block font-satoshi font-medium text-[40px] relative pb-8 w-fit'>
+          See Upcoming Auctions and Exhibitions
+          {/* TODO: update arrow icon design */}
+          {/* arrow icon  */}
+          <span
+            aria-hidden
+            className='w-11/12 absolute bottom-3 left-6 bg-white z-30 h-[1px]'
+          ></span>
+        </h1>
 
-            <h3 className='font-bellefair text-xl'>
-              MONALISA REDEFINED IN STYLE.
-            </h3>
-          </div>
+        {/* TODO: update background image for section*/}
 
-          <div className='flex items-start gap-2 mt-4'>
-            <div className=' font-bellefair text-[40px]'>01</div>
+        <div className='lg:flex lg:items-end'>
+          <div>
+            <div className='flex items-center gap-8 pr-8'>
+              <div
+                className='w-[16px] h-[16px] bg-white rounded-full'
+                aria-hidden
+              ></div>
 
-            <div>
-              <p className='font-poppins text-xs uppercase'>
-                Start on : 08:00 GTS . Monday
-              </p>
+              <h3 className='font-bellefair text-xl'>
+                MONALISA REDEFINED IN STYLE.
+              </h3>
+            </div>
 
-              <p className='font-satoshi font-medium text-[10px] my-4'>
-                GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
-                INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
-                HIGHEST AND LOWEST BIDS.
-              </p>
+            <div className='flex items-start gap-2 mt-4'>
+              <div className=' font-bellefair text-[40px]'>01</div>
+
+              <div>
+                <p className='font-poppins text-xs uppercase'>
+                  Start on : 08:00 GTS . Monday
+                </p>
+
+                <p className='font-satoshi font-medium text-[10px] my-4'>
+                  GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
+                  INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
+                  HIGHEST AND LOWEST BIDS.
+                </p>
+              </div>
+            </div>
+
+            <div className='flex items-center justify-end gap-8'>
+              <button className='font-satoshi text-sm underline underline-offset-2'>
+                See more
+              </button>
+
+              <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px]'>
+                Set a reminder
+              </button>
             </div>
           </div>
+        </div>
 
-          <div className='flex items-center justify-end gap-8'>
-            <button className='font-satoshi text-sm underline underline-offset-2'>
-              See more
+        {/* TODO: 
+        - create logic for slider 
+        -create slider to integrate with controls */}
+
+        <div className='hidden lg:flex items-center justify-between mt-4'>
+          <div>slider</div>
+
+          <div>
+            <button
+              className='w-[70px] h-[70px] rounded-full text-center bg-white bg-opacity-20 backdrop-blur-lg
+                shadow-xl mr-6'
+            >
+              <img
+                src={chevronLeftIcon}
+                role='presentation'
+                className='m-auto'
+              />
             </button>
 
-            <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px]'>
-              Set a reminder
+            <button
+              className='w-[70px] h-[70px] rounded-full text-center bg-white bg-opacity-20 backdrop-blur-lg
+                shadow-xl'
+            >
+              <img
+                src={chevronRightIcon}
+                role='presentation'
+                className='m-auto'
+              />
             </button>
           </div>
         </div>
