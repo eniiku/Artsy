@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import mailIcon from '@/assets/icons/footer/icon-mail.svg';
 import markerIcon from '@/assets/icons/footer/icon-marker.svg';
 
@@ -77,9 +79,14 @@ const Footer = () => {
 
           <div className='flex gap-24 my-16 text-2xl capitalize '>
             <ul>
-              {['blog', 'wallets', 'rates', 'high bids'].map((link) => (
-                <li key={link} className='my-4'>
-                  {link}
+              {[
+                { page: 'home', url: '/' },
+                { page: 'auctions', url: '/auctions' },
+                { page: 'marketplace', url: '/marketplace' },
+                { page: 'drops', url: '/drops' },
+              ].map((link) => (
+                <li key={link.page} className='my-4'>
+                  <Link to={link.url}>{link.page}</Link>
                 </li>
               ))}
             </ul>
