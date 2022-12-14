@@ -193,7 +193,7 @@ const HomePage = () => {
       <section
         aria-label='navigation links to specific locations on website'
         className='-mx-3 overflow-hidden border-t border-t-black mb-16
-        lg:-mx-24 lg:border-t-dark_gray_clr-200 lg:my-36'
+        lg:-mx-24 lg:border-t-dark_gray_clr-200 lg:my-36 lg:border-t-0'
       >
         <Link url='/marketplace'>Explore marketplace</Link>
 

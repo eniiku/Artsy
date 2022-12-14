@@ -16,9 +16,11 @@ const Link = (props: LinkProps) => {
       <div
         aria-label={`click to ${children}.`}
         className='flex items-center justify-between border-b border-black px-2 py-4
-        lg:border-dark_gray_clr-200 lg:px-8'
+        lg:border-dark_gray_clr-200 lg:px-12 lg:py-8 lg:border-b-0 lg:border-t'
       >
-        <h3 className='font-satoshi font-medium text-2xl'>{children}</h3>
+        <h3 className='font-satoshi font-medium text-2xl lg:text-5xl'>
+          {children}
+        </h3>
 
         <img
           src={arrowRightIcon}
