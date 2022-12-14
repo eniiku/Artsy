@@ -204,23 +204,41 @@ const HomePage = () => {
 
       <section
         aria-label='showcase of the best creators for the week'
-        className='bg-light_gray_clr-300 -mx-3 relative h-[250px] overflow-hidden'
+        className='bg-light_gray_clr-300 -mx-3 relative h-[250px] overflow-hidden lg:-mx-24
+          lg:h-[922px] lg:p-20 lg:overflow-visible'
       >
         <div className='flex items-start justify-between'>
-          <h1 className='font-clash_display font-semibold text-2xl uppercase p-3 text-left '>
+          <h1
+            className='font-clash_display font-semibold text-2xl uppercase p-3 text-left lg:text-[55px]
+            lg:w-[50%] lg:p-0 lg:leading-[155.5%]'
+          >
             top creators of the week
           </h1>
 
-          <ul className='flex font-clash_display text-[10px] capitalize -mr-8 gap-4'>
-            <li>editoral</li>
+          <div className=' block lg:flex lg:items-center lg:gap-8 h-full'>
+            <div className='min-h-full w-[10px] bg-light_gray_clr-500 hidden lg:block relative rounded-[50px]'>
+              <div className='h-1/4 absolute bottom-0 bg-dark_gray_clr-300'></div>
+            </div>
 
-            <li className='list-disc'>fashion</li>
+            <ul
+              className='flex font-clash_display text-[10px] capitalize -mr-8 gap-4 lg:mr-0 lg:flex-col
+              lg:text-[40px]'
+            >
+              <li className='list-disc lg:list-none'>editorals</li>
 
-            <li className='list-disc'>lifestyle</li>
-          </ul>
+              <li className='list-disc lg:list-none'>fashion</li>
+
+              <li className='list-disc lg:list-none'>lifestyle</li>
+
+              <li className='hidden lg:block lg:list-none'>blueprint</li>
+            </ul>
+          </div>
         </div>
 
-        <div className='font-clash_display font-extralight text-[13px] text-opacity-50 text-center'>
+        <div
+          className='font-clash_display font-extralight text-[13px] text-opacity-50 text-center
+          lg:text-[32px] lg:my-8 lg:text-left'
+        >
           “Everything always looked better in black and white. Everything always
           as if it were the first time; there’s always more people in a black
           and white photograph. It just makes it seem that there were more
@@ -228,15 +246,20 @@ const HomePage = () => {
           photography. Everything looks more exciting.”– Jack Lowden
         </div>
 
-        <div className='font-clash_display font-bold absolute z-10 text-right -bottom-4 right-0'>
-          <p className='text-[32px] uppercase text-dark_gray_clr-200'>circa</p>
+        <div
+          className='font-clash_display font-bold absolute z-10 text-right -bottom-4 right-0
+        lg:right-20 lg:bottom-20'
+        >
+          <p className='text-[32px] uppercase text-dark_gray_clr-200 lg:text-5xl lg:text-center'>
+            circa
+          </p>
 
-          <p className='text-[60px] line-through text-dark_gray_clr-700'>
+          <p className='text-[60px] line-through text-dark_gray_clr-700 lg:text-[170px]'>
             1985
           </p>
         </div>
 
-        <div className='absolute z-30 bottom-0 left-[40%] w-[40px] h-[150px] bg-black'></div>
+        <div className='absolute z-30 bottom-0 left-[40%] w-[40px] h-[150px] bg-black lg:left-[50%] lg:-bottom-12'></div>
       </section>
 
       {/* Footer Section */}
