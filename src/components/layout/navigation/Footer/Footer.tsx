@@ -49,14 +49,14 @@ const Footer = () => {
         </form>
       </div>
 
-      <div className='mt-8'>
+      <div className='mt-8 lg:hidden'>
         <h3 className='uppercase font-poppins font-light'>reach us</h3>
 
         <div className='text-[11px] mt-3'>
           <div className='flex items-center gap-4 mb-4'>
             <img src={mailIcon} role='presentation' className='w-7' />
 
-            <p>artsystudios@gmail.com</p>
+            <p className='font-satoshi text-[26px]'>artsystudios@gmail.com</p>
           </div>
 
           <div className='flex items-center gap-4 mb-4'>
@@ -65,6 +65,62 @@ const Footer = () => {
             <p>Lagos, Nigeria.</p>
           </div>
         </div>
+      </div>
+
+      {/* Desktop Navigation Links */}
+
+      <div className='hidden lg:block'>
+        <div className='font-satoshi flex items-center justify-around text-dark_gray_clr-200 '>
+          <h1 className='font-clash_display font-semibold text-5xl uppercase text-dark_gray_clr-300'>
+            arsty.
+          </h1>
+
+          <div className='flex gap-24 my-16 text-2xl capitalize '>
+            <ul>
+              {['blog', 'wallets', 'rates', 'high bids'].map((link) => (
+                <li key={link} className='my-4'>
+                  {link}
+                </li>
+              ))}
+            </ul>
+
+            <ul>
+              {['blog', 'wallets', 'rates', 'high bids'].map((link) => (
+                <li key={link} className='my-4'>
+                  {link}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className='self-start mt-20'>
+            <div className='font-satoshi text-[26px]'>
+              <div className='flex items-center gap-2 mb-8'>
+                <img
+                  src={mailIcon}
+                  role='presentation'
+                  className='w-7 lg:w-[45px]'
+                />
+
+                <p>artsystudios@gmail.com</p>
+              </div>
+
+              <div className='flex items-center gap-4'>
+                <img
+                  src={markerIcon}
+                  role='presentation'
+                  className='w-7 lg:w-[40px]'
+                />
+
+                <p>Lagos, Nigeria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p className='font-rubik text-medium text-2xl text-dark_gray_clr-200 text-opacity-40 text-center'>
+          Artsystudios © 2022. All Rights Reserved.
+        </p>
       </div>
     </section>
   );
