@@ -114,41 +114,53 @@ const HomePage = () => {
 
         {/* TODO: update background image for section*/}
 
-        <div className='lg:flex lg:items-end'>
-          <div>
-            <div className='flex items-center gap-8 pr-8'>
-              <div
-                className='w-[16px] h-[16px] bg-white rounded-full'
-                aria-hidden
-              ></div>
-
-              <h3 className='font-bellefair text-xl'>
-                MONALISA REDEFINED IN STYLE.
-              </h3>
-            </div>
-
-            <div className='flex items-start gap-2 mt-4'>
-              <div className=' font-bellefair text-[40px]'>01</div>
+        <div className='lg:flex lg:items-end lg:flex-1 lg:border lg:border-black bg-blend-overlay bg-black bg-opacity-50'>
+          <div className='lg:w-full lg:px-10 lg:pb-12 lg:flex lg:justify-between lg:items-end'>
+            <div className='lg:flex lg:items-center lg:gap-4 lg:w-3/5'>
+              <div className='hidden lg:block font-bellefair text-[67px] text-[#E1E1E1] text-opacity-30'>
+                01
+              </div>
 
               <div>
-                <p className='font-poppins text-xs uppercase'>
-                  Start on : 08:00 GTS . Monday
-                </p>
+                <div className='flex items-center gap-8 pr-8 lg:relative'>
+                  <div
+                    className='w-[16px] h-[16px] bg-white rounded-full lg:absolute lg:top-1 lg:-left-8'
+                    aria-hidden
+                  ></div>
 
-                <p className='font-satoshi font-medium text-[10px] my-4'>
-                  GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
-                  INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
-                  HIGHEST AND LOWEST BIDS.
-                </p>
+                  <h3 className='font-bellefair text-xl lg:text[26px] lg:w-[22ch] lg:text-left'>
+                    MONALISA REDEFINED IN STYLE.
+                  </h3>
+                </div>
+
+                <div className='flex items-start gap-2 mt-4'>
+                  <div className=' font-bellefair text-[40px] lg:text-[67px] lg:hidden'>
+                    01
+                  </div>
+
+                  <div>
+                    <p className='font-poppins text-xs uppercase lg:text-[13px]'>
+                      Start on : 08:00 GTS . Monday
+                    </p>
+
+                    <p className='font-satoshi font-medium text-[10px] my-4 lg:text-base'>
+                      GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
+                      INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
+                      HIGHEST AND LOWEST BIDS.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* Controls(slider & buttons) */}
+
             <div className='flex items-center justify-end gap-8'>
-              <button className='font-satoshi text-sm underline underline-offset-2'>
+              <button className='font-satoshi text-sm underline underline-offset-2 lg:text-2xl lg:underline-offset-8'>
                 See more
               </button>
 
-              <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px]'>
+              <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px] lg:text-2xl lg:px-3 lg:py-3'>
                 Set a reminder
               </button>
             </div>
