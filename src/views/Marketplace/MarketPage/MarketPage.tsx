@@ -32,11 +32,13 @@ const MarketPage = () => {
 
       {/* Products Overview */}
       <div className={`mt-8 ${styles.xPadding}`}>
-        <div>
+        <div className='mb-10'>
           {['', '', '', '', '', '', '', '', '', '']
             .slice(0, 5)
             .map((product, index) => (
-              <div key={index}>{<MarketItem />}</div>
+              <div key={index} className='mt-12'>
+                {<MarketItem />}
+              </div>
             ))}
         </div>
 
