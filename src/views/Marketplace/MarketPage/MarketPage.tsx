@@ -4,6 +4,7 @@ import MarketItem from '../MarketItem/MarketItem';
 import filterIcon from '@/assets/icons/product/icon-filter.svg';
 import searchIcon from '@/assets/icons/navigation/icon-search.svg';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import chevronUpIcon from '@/assets/icons/chevron/icon-chevron-up-outlined.svg';
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
 
 const MarketPage = () => {
@@ -77,61 +78,126 @@ const MarketPage = () => {
         </div>
       </div>
 
-      <div className={`${styles.xPadding} products-grid items-start lg:mt-16`}>
+      <div
+        className={`${styles.xPadding} products-grid items-start lg:mt-16 h-fit`}
+      >
         {/* Preferences controls/section */}
 
-        <div className='font-satoshi hidden lg:block'>
+        <div className='font-satoshi hidden lg:block h-full overflow-y-hidden'>
           {/* Filter */}
-          <h1 className='font-medium text-[32px] flex items-center gap-2'>
-            <img src={filterIcon} aria-hidden className='w-[55px]' />
-            Filter
-          </h1>
+          <div>
+            <h1 className='font-medium text-[32px] flex items-center gap-2'>
+              <img src={filterIcon} aria-hidden className='w-[55px]' />
+              Filter
+            </h1>
 
-          <div
-            className='h-[6px] bg-light_gray_clr-400 rounded-lg mt-2'
-            aria-hidden
-          ></div>
+            <div
+              className='h-[6px] bg-light_gray_clr-400 rounded-lg mt-2'
+              aria-hidden
+            ></div>
+          </div>
+
+          {/* category */}
 
           <div>
-            <div className='font-medium text-[28px] flex items-center justify-between'>
+            <div className='font-medium text-[28px] flex items-center justify-between mt-16 mb-10'>
               By category
-              <img src={chevronDownIcon} aria-hidden />
+              <img src={chevronUpIcon} aria-hidden />
             </div>
 
-            <div>checkboxes</div>
+            <form>
+              {[
+                'Editorials',
+                'Fashion',
+                'Optics',
+                'Art & Museum',
+                'Nature',
+              ].map((item) => (
+                <div key={item} className='mt-5'>
+                  <input type='checkbox' name={item} id={item} />
+                  <label
+                    htmlFor={item}
+                    className='ml-3 text-2xl text-dark_gray_clr-300'
+                  >
+                    {item}
+                  </label>
+                </div>
+              ))}
+            </form>
           </div>
 
           {/* by price */}
 
           <div>
-            <div className='font-medium text-[28px] flex items-center justify-between'>
+            <div className='font-medium text-[28px] flex items-center justify-between mt-16 mb-10'>
               By price
-              <img src={chevronDownIcon} aria-hidden />
+              <img src={chevronUpIcon} aria-hidden />
             </div>
 
             <div>
-              <div>price</div>
+              <h3 className='text-2xl text-dark_gray_clr-300 mb-8'>
+                $100.00 - $150.00
+              </h3>
 
-              <div>slider</div>
+              <form>
+                <input
+                  type='range'
+                  name='price'
+                  min={0}
+                  max={999}
+                  className='w-full'
+                />
+              </form>
             </div>
           </div>
 
           {/* by artist */}
           <div>
-            <div className='font-medium text-[28px] flex items-center justify-between'>
+            <div className='font-medium text-[28px] flex items-center justify-between mt-20 mb-10'>
               By artist
-              <img src={chevronDownIcon} aria-hidden />
+              <img src={chevronUpIcon} aria-hidden />
             </div>
 
-            <div>some text</div>
+            <div>
+              <ul>
+                {[
+                  'All',
+                  'Below $100.00',
+                  '$100.00 - $150.00',
+                  '$150.00 - $200.00',
+                  'Above $200.00',
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className='text-2xl text-dark_gray_clr-300 mt-5'
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Products Overview */}
         <div className='mt-8 lg:mt-0'>
-          <div className='mb-10 products-grid-items'>
+          {/* List of Products on Mobile view*/}
+
+          <div className='mb-10 products-grid-items lg:hidden'>
             {['', '', '', '', '', '', '', '', '', '']
               .slice(0, 5)
+              .map((product, index) => (
+                <div key={index} className='mt-12 lg:mt-0 w-fit'>
+                  {<MarketItem />}
+                </div>
+              ))}
+          </div>
+
+          {/* List of Products on Desktop View */}
+
+          <div className='mb-10 products-grid-items hidden lg:grid'>
+            {['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+              .slice(0, 9)
               .map((product, index) => (
                 <div key={index} className='mt-12 lg:mt-0 w-fit'>
                   {<MarketItem />}
@@ -150,6 +216,13 @@ const MarketPage = () => {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* See more button */}
+      <div className='w-full text-center'>
+        <button className='mt-20 mb-60 font-medium text-3xl linear-btn'>
+          See more
+        </button>
       </div>
 
       {/* Footer section */}
