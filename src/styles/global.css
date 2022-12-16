@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Create grid for  MarketPage Section */
+
+@media screen and (min-width: 1024px) {  
+  .products-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 2em;
+  }
+
+  .products-grid-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    column-gap: 2rem;
+    row-gap: 3.2rem;
+  }
+}
