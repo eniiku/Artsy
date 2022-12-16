@@ -2,7 +2,7 @@ const MarketItem = () => {
   return (
     <>
       {/* mobile view */}
-      <div>
+      <div className='lg:hidden'>
         <div className='h-[380px] w-full bg-indigo-300'>image placeholder</div>
         <div
           className='font-satoshi font-medium uppercase flex justify-between items-center mt-2
@@ -15,7 +15,7 @@ const MarketItem = () => {
 
       {/* desktop view */}
 
-      <div className='bg-white rounded-2xl shadow-2xl w-fit p-4 '>
+      <div className='bg-white rounded-2xl shadow-2xl w-fit p-4 hidden lg:block'>
         <div className='w-[240px] h-[280px] bg-indigo-300 rounded-lg'>
           image placeholder
         </div>
