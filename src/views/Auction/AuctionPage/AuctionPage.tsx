@@ -1,4 +1,5 @@
 import styles from '@/styles';
+import LiveCard from '../components/LiveCard/LiveCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 
 const AuctionPage = () => {
@@ -13,9 +14,11 @@ const AuctionPage = () => {
       <div className='my-10'>
         <p>Here’s an overview of products actively on auction, explore!</p>
 
-        <ul className='flex gap-12 overflow-hidden'>
+        <ul className='flex gap-12 overflow-hidden my-12'>
           {['', '', '', '', '', '', '', ''].map((item, index) => (
-            <li key={index}>LiveCard</li>
+            <li key={index}>
+              <LiveCard />
+            </li>
           ))}
         </ul>
       </div>
