@@ -32,7 +32,7 @@ const MarketItemDetails = () => {
         </div>
 
         <div className='overflow-hidden'>
-          <ul className='lg:flex lg:gap-12'>
+          <ul className='flex gap-12'>
             {['', '', '', '', ''].map((item, index) => (
               <li key={index} className='w-[530px] flex-none'>
                 <MarketItemFeat />
