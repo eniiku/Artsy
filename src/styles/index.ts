@@ -1,5 +1,5 @@
 const styles = {
-  xPadding: 'px-3 lg:px-24',
+  xPadding: 'px-5 lg:px-24',
 };
 
 export default styles;
