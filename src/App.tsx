@@ -1,7 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 
 import { Navbar } from './components/layout';
-import { HomePage, MarketItemDetails, MarketPage } from './views';
+import {
+  HomePage,
+  LiveAuctionPage,
+  MarketItemDetails,
+  MarketPage,
+} from './views';
 import AuctionPage from './views/Auction/AuctionPage/AuctionPage';
 
 const App = () => {
@@ -14,6 +19,7 @@ const App = () => {
         <Route path='auctions' element={<AuctionPage />} />
         <Route path='drops' element={<div>drops</div>} />
       </Route>
+      <Route path='auctions/live/:id' element={<LiveAuctionPage />} />
     </Routes>
   );
 };
