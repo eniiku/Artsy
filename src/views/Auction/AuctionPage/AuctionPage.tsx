@@ -1,5 +1,6 @@
 import styles from '@/styles';
 import LiveCard from '../components/LiveCard/LiveCard';
+import BidsCard from '../components/BidsCard/BidsCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 
 const AuctionPage = () => {
@@ -26,9 +27,11 @@ const AuctionPage = () => {
       <div className='my-10'>
         <h3>Top bids from popular creators </h3>
 
-        <ul className='flex gap-12 overflow-hidden'>
-          {['', '', '', '', '', '', '', ''].map((item, index) => (
-            <li key={index}>BidsCard</li>
+        <ul>
+          {['', '', '', '', '', '', '', ''].slice(0, 3).map((item, index) => (
+            <li key={index} className='mt-6'>
+              <BidsCard />
+            </li>
           ))}
         </ul>
       </div>
