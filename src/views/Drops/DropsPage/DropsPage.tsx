@@ -1,6 +1,7 @@
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
 import DropsCard from '../DropsCard/DropsCard';
 import styles from '../../../styles';
+import { Footer } from '../../../components/layout';
 
 const DropsPage = () => {
   return (
@@ -36,6 +37,14 @@ const DropsPage = () => {
           </li>
         ))}
       </ul>
+
+      <div className='hidden lg:block text-center'>
+        <button className='text-[30px] font-medium px-14 py-2 rounded-[10px] border border-black my-8 text-center'>
+          See more
+        </button>
+
+        <Footer />
+      </div>
     </div>
   );
 };
