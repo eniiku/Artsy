@@ -6,7 +6,7 @@ const DropsCard = () => {
           upcoming
         </div>
 
-        <div className='bg-[#F5F4F4] bg-opacity-30 absolute bottom-3 left-3 right-3 rounded-[10px] py-2 px-6 lg:px-10 lg:py-4 text-white lg:flex items-end justify-between'>
+        <div className='bg-[#F5F4F4] bg-opacity-30 absolute bottom-3 left-3 right-3 lg:left-6 lg:right-6 rounded-[10px] py-2 px-6 lg:px-10 lg:py-4 text-white lg:flex items-end justify-between'>
           <div className='flex flex-col gap-4 items-start'>
             <p className='font-satoshi lg:text-[28px]'>Time remaining</p>
 
@@ -15,7 +15,7 @@ const DropsCard = () => {
             </h1>
           </div>
 
-          <button className='hidden lg:block bg-blue_clr-500 px-10 py-2 font-satoshi text-2xl rounded-full'>
+          <button className='hidden lg:block bg-blue_clr-500 px-10 py-1 font-satoshi text-2xl rounded-full'>
             Join
           </button>
         </div>
