@@ -28,7 +28,14 @@ const DropsPage = () => {
         </div>
       </div>
 
-      <DropsCard />
+      {/* Drops Card Section */}
+      <ul className='mt-16'>
+        {[1, 2, 3, 4].map((card) => (
+          <li key={card} className='mb-14 lg:mb-28'>
+            <DropsCard />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
