@@ -1,4 +1,5 @@
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
+import DropsCard from '../DropsCard/DropsCard';
 import styles from '../../../styles';
 
 const DropsPage = () => {
@@ -27,7 +28,7 @@ const DropsPage = () => {
         </div>
       </div>
 
-      <div>drops card</div>
+      <DropsCard />
     </div>
   );
 };
