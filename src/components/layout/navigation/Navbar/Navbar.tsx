@@ -84,11 +84,13 @@ const Navbar = () => {
             aria-label='click to open view products in cart'
             aria-pressed='false'
           >
-            <img
-              src={cartIcon}
-              role='presentation'
-              className={navbarStyles.cartIcon}
-            />
+            <NavLink to='marketplace/cart'>
+              <img
+                src={cartIcon}
+                role='presentation'
+                className={navbarStyles.cartIcon}
+              />
+            </NavLink>
           </button>
 
           {/* Bell Icon */}
