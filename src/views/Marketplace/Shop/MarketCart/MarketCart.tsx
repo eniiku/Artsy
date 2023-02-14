@@ -2,7 +2,7 @@ const MarketCart = () => {
   return (
     <div className='font-satoshi text-lg relative'>
       {/* Cart Controls */}
-      <div className='bg-[#3A3A3A] my-10 py-2 px-10 flex items-center justify-center gap-14 w-fit mx-auto rounded-full font-medium'>
+      <div className='lg:hidden bg-[#3A3A3A] my-10 py-2 px-10 flex items-center justify-center gap-14 w-fit mx-auto rounded-full font-medium'>
         <button className='bg-white py-1 px-10 rounded-full'>Shop</button>
         <button className='text-white'>Scheduled</button>
       </div>
@@ -11,7 +11,7 @@ const MarketCart = () => {
       <div>Cart Prouct Card</div>
 
       {/* Cart Details */}
-      <div className='fixed bottom-0 left-5 right-5 pb-10 z-40'>
+      <div className='fixed bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black'>
         <ul className='text-xl text-[#888888]'>
           <li className='cart-list'>
             Products in cart: <span>4 items</span>
