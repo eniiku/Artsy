@@ -10,33 +10,29 @@ import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.s
 const MarketPage = () => {
   return (
     <div>
-      <div className='mx-2'>
-        <div className='my-6'>breadcrumbs</div>
+      {/* Mobile sorting controls */}
+      <div className='lg:hidden'>
+        <h3 className='font-poppins italic text-light_gray_clr-100 mb-4'>
+          Showing 1-5 of 18 results
+        </h3>
 
-        {/* Mobile sorting controls */}
-        <div className='lg:hidden'>
-          <h3 className='font-poppins italic text-light_gray_clr-100 mb-4'>
-            Showing 1-5 of 18 results
-          </h3>
-
-          <div
-            className='flex justify-between bg-white py-4 px-6 rounded-2xl shadow-xl
+        <div
+          className='flex justify-between bg-white py-4 px-6 rounded-2xl shadow-xl
           border border-[#eee] border-opacity-30'
-          >
-            {['Filters', 'Sort by'].map((item) => (
-              <div
-                key={item}
-                className='flex gap-2 items-center font-satoshi text-[18px]'
-              >
-                {item}
-                <img
-                  src={chevronDownIcon}
-                  role='presentation'
-                  className='w-[34px]'
-                />
-              </div>
-            ))}
-          </div>
+        >
+          {['Filters', 'Sort by'].map((item) => (
+            <div
+              key={item}
+              className='flex gap-2 items-center font-satoshi text-[18px]'
+            >
+              {item}
+              <img
+                src={chevronDownIcon}
+                role='presentation'
+                className='w-[34px]'
+              />
+            </div>
+          ))}
         </div>
 
         {/* Desktop search and sort controls */}

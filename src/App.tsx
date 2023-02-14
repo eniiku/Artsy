@@ -6,6 +6,7 @@ import {
   LiveAuctionPage,
   MarketItemDetails,
   MarketPage,
+  MarketLayout,
   DropsPage,
 } from './views';
 import AuctionPage from './views/Auction/AuctionPage/AuctionPage';
@@ -15,7 +16,9 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Navbar />}>
         <Route index element={<HomePage />} />
-        <Route path='marketplace' element={<MarketPage />} />
+        <Route path='marketplace' element={<MarketLayout />}>
+          <Route index element={<MarketPage />} />
+        </Route>
         <Route path='marketplace/:id' element={<MarketItemDetails />} />
         <Route path='auctions' element={<AuctionPage />} />
         <Route path='drops' element={<DropsPage />} />
