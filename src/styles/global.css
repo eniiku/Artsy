@@ -30,3 +30,19 @@ border-radius: 10px;
 border: 2px solid;
 padding: .7rem 2.4rem
 }
+
+/* Style List items in src/Marketplace/Cart/Cart.tsx */
+@layer components{
+.cart-list {
+  @apply flex justify-between my-5;
+}
+
+  .cart-list span{
+    @apply font-medium text-dark_gray_clr-300;
+  }
+}
+
+.bold-list {
+  font-weight: 500;
+  color: #292929;
+}
