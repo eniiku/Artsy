@@ -31,18 +31,27 @@ border: 2px solid;
 padding: .7rem 2.4rem
 }
 
-/* Style List items in src/Marketplace/Cart/Cart.tsx */
+/* Style List items in src/views/Marketplace/MarketCart/MarketCart.tsx */
 @layer components{
-.cart-list {
+  .cart-list {
   @apply flex justify-between my-5 lg:my-8;
 }
 
   .cart-list span{
     @apply font-medium text-dark_gray_clr-300;
   }
-}
 
-.bold-list {
-  font-weight: 500;
-  color: #292929;
+  /* style form elements in src/views/Marketplace/Shop/components/Form.tsx */
+  .form-container {
+    @apply flex flex-col gap-4 my-8
+  }
+
+  .form-label {
+    @apply text-[#888888] font-satoshi text-xl first-letter:uppercase
+  }
+
+  .form-input {
+    @apply border-[0.5px] border-[#747474] border-opacity-30 bg-[#F2F2F2] w-full py-3 px-4 rounded-[10px] font-satoshi placeholder:text-[#888888]
+  }
+
 }

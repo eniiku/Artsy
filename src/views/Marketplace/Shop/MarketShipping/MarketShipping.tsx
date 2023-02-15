@@ -1,4 +1,5 @@
 import Button from '../components/Button';
+import Form from '../components/Form';
 
 interface MarketShippingProps {
   goToPayment: () => void;
@@ -10,10 +11,10 @@ const MarketShipping = (props: MarketShippingProps) => {
 
   return (
     <div>
-      <div>{/* Form */}</div>
+      <Form />
 
       {/* Button Controls */}
-      <div className='flex flex-col items-center gap-8 mt-8 mb-16'>
+      <div className='flex flex-col items-center gap-8 mt-12 mb-16'>
         <Button buttonAction={goToPayment} type='primary'>
           Proceed to Payment
         </Button>
