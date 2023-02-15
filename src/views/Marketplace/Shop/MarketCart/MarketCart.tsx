@@ -1,4 +1,5 @@
 import Button from '../components/Button';
+import CartDetails from '../components/CartDetails';
 import ProductCard from '../components/ProductCard';
 
 interface MarketCartProps {
@@ -30,20 +31,7 @@ const MarketCart = (props: MarketCartProps) => {
         className='fixed lg:static bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black 
         lg:shadow-none lg:pb-20 lg:px-0 lg:pt-14 lg:border-t-[0.3px] lg:border-[#747474] lg:grid grid-cols-2'
       >
-        <ul className='text-xl text-[#888888] lg:order-2 lg:w-full lg:text-[28px]'>
-          <li className='cart-list'>
-            Products in cart: <span>4 items</span>
-          </li>
-          <li className='cart-list'>
-            Shipping: <span>$2.50</span>
-          </li>
-          <li className='cart-list'>
-            Total <span>$114.00</span>
-          </li>
-          <li className='cart-list py-5 border-t border-dashed border-light_gray_clr-700 lg:hidden'>
-            Grand total: <span>$116.50</span>
-          </li>
-        </ul>
+        <CartDetails />
 
         <div className='flex flex-col justify-center items-center text-lg gap-4 lg:order-1 lg:gap-12 lg:justify-self-start'>
           <Button buttonAction={goToShipping} type='primary'>
