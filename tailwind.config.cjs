@@ -11,6 +11,8 @@ module.exports = {
         rubik: ['Rubik', 'sans-serif'],
         stix: ['STIX Two Text', 'serif'],
         bellefair: ['Bellefair', 'serif'],
+        inter: ['Inter','sans-serif'],
+        cardo: ['Cardo, serif']
       },
       colors: {
         dark_gray_clr: {

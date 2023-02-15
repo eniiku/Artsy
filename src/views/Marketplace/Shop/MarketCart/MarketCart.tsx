@@ -1,3 +1,5 @@
+import ProductCard from '../components/ProductCard';
+
 const MarketCart = () => {
   return (
     <div className='font-satoshi text-lg relative'>
@@ -8,7 +10,13 @@ const MarketCart = () => {
       </div>
 
       {/* Cart List */}
-      <div>Cart Prouct Card</div>
+      <ul className='my-24'>
+        {[1, 2, 3, 4, 5].map((product) => (
+          <li key={product} className='my-14'>
+            <ProductCard />
+          </li>
+        ))}
+      </ul>
 
       {/* Cart Details */}
       <div className='fixed bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black'>
