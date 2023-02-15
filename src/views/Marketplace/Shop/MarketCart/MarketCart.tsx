@@ -30,7 +30,7 @@ const MarketCart = (props: MarketCartProps) => {
         className='fixed lg:static bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black 
         lg:shadow-none lg:pb-20 lg:px-0 lg:pt-14 lg:border-t-[0.3px] lg:border-[#747474] lg:grid grid-cols-2'
       >
-        <ul className='text-xl text-[#888888] lg:order-2 lg:w-full'>
+        <ul className='text-xl text-[#888888] lg:order-2 lg:w-full lg:text-[28px]'>
           <li className='cart-list'>
             Products in cart: <span>4 items</span>
           </li>
@@ -50,7 +50,7 @@ const MarketCart = (props: MarketCartProps) => {
             Proceed to checkout
           </Button>
 
-          <Button buttonAction={null} type='secondary'>
+          <Button buttonAction={undefined} type='secondary'>
             Continue shopping
           </Button>
         </div>
