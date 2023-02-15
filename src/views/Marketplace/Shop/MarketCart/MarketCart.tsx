@@ -1,6 +1,6 @@
 import Button from '../components/Button';
 import CartDetails from '../components/CartDetails';
-import ProductCard from '../components/ProductCard';
+import CartList from '../components/CartList';
 
 interface MarketCartProps {
   goToShipping: () => void;
@@ -18,13 +18,7 @@ const MarketCart = (props: MarketCartProps) => {
       </div>
 
       {/* Cart List */}
-      <ul className='my-24 lg:mb-0'>
-        {[1, 2, 3, 4, 5].map((product) => (
-          <li key={product} className='my-14'>
-            <ProductCard />
-          </li>
-        ))}
-      </ul>
+      <CartList />
 
       {/* Cart Details */}
       <div
