@@ -13,12 +13,12 @@ const ProductCard = () => {
         </h4>
 
         <h1 className='font-bold text-[22px] lg:text-2xl text-dark_gray_clr-200'>
-          Philomena '22
+          Philomena <span className='hidden lg:block'>'22</span>
         </h1>
 
         <h4 className='hidden lg:block text-2xl text-[#888888]'>Clearmane</h4>
 
-        <h5 className='text-[#888888]'>
+        <h5 className='hidden lg:block text-[#888888] text-xl'>
           Size: <span className='text-dark_gray_clr-200'>200ft</span>
         </h5>
 
@@ -43,7 +43,7 @@ const ProductCard = () => {
           className='w-10 h-10'
         />
 
-        <h2 className='font-cardo font-bold text-2xl text-dark_gray_clr-300 lg:text-3xl'>
+        <h2 className='font-cardo font-bold text-2xl text-dark_gray_clr-300 lg:text-4xl'>
           $36.50
         </h2>
       </div>
