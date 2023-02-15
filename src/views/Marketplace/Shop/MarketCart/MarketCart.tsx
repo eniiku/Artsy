@@ -1,6 +1,12 @@
 import ProductCard from '../components/ProductCard';
 
-const MarketCart = () => {
+interface MarketCartProps {
+  goToShipping: () => void;
+}
+
+const MarketCart = (props: MarketCartProps) => {
+  const { goToShipping } = props;
+
   return (
     <div className='font-satoshi text-lg relative'>
       {/* Cart Controls */}
@@ -39,7 +45,10 @@ const MarketCart = () => {
         </ul>
 
         <div className='flex flex-col justify-center items-center text-lg gap-4 lg:order-1 lg:gap-12 lg:justify-self-start'>
-          <button className='bg-blue_clr-700 font-medium text-white py-3 px-16 w-fit lg:text-[32px] lg:py-8 lg:px-32'>
+          <button
+            className='bg-blue_clr-700 font-medium text-white py-3 px-16 w-fit lg:text-[32px] lg:py-8 lg:px-32'
+            onClick={goToShipping}
+          >
             Proceed to checkout
           </button>
           <button className='text-[#006CA2] underline underline-offset-4 lg:text-[28px]'>
