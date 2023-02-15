@@ -1,14 +1,15 @@
 interface MarketShippingProps {
   goToPayment: () => void;
+  goToCart: () => void;
 }
 
 const MarketShipping = (props: MarketShippingProps) => {
-  const { goToPayment } = props;
+  const { goToPayment, goToCart } = props;
 
   return (
     <div>
-      MarketShipping
       <button onClick={goToPayment}>Proceed to Payment</button>
+      <button onClick={goToCart}>Go to Cart</button>
     </div>
   );
 };

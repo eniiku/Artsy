@@ -80,7 +80,10 @@ const CartLayout = () => {
       ) : null}
 
       {currentPage.shipping ? (
-        <MarketShipping goToPayment={toggleCurrentPagetoPayment} />
+        <MarketShipping
+          goToPayment={toggleCurrentPagetoPayment}
+          goToCart={toggleCurrentPagetoCart}
+        />
       ) : null}
 
       {currentPage.payment ? <MarketPayment /> : null}
