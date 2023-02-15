@@ -13,7 +13,7 @@ const ProductCard = () => {
         </h4>
 
         <h1 className='font-bold text-[22px] lg:text-2xl text-dark_gray_clr-200'>
-          Philomena <span className='hidden lg:block'>'22</span>
+          Philomena <span className='hidden lg:inline-block'>'22</span>
         </h1>
 
         <h4 className='hidden lg:block text-2xl text-[#888888]'>Clearmane</h4>
@@ -36,12 +36,14 @@ const ProductCard = () => {
       </div>
 
       <div className='flex flex-col justify-between items-center'>
-        <img
-          src={outlinedCloseIcon}
-          alt=' '
-          role='presentation'
-          className='w-10 h-10'
-        />
+        <button>
+          <img
+            src={outlinedCloseIcon}
+            alt=' '
+            role='presentation'
+            className='w-10 h-10'
+          />
+        </button>
 
         <h2 className='font-cardo font-bold text-2xl text-dark_gray_clr-300 lg:text-4xl'>
           $36.50
