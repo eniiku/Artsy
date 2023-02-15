@@ -1,3 +1,4 @@
+import Button from '../components/Button';
 import ProductCard from '../components/ProductCard';
 
 interface MarketCartProps {
@@ -45,15 +46,13 @@ const MarketCart = (props: MarketCartProps) => {
         </ul>
 
         <div className='flex flex-col justify-center items-center text-lg gap-4 lg:order-1 lg:gap-12 lg:justify-self-start'>
-          <button
-            className='bg-blue_clr-700 font-medium text-white py-3 px-16 w-fit lg:text-[32px] lg:py-8 lg:px-32'
-            onClick={goToShipping}
-          >
+          <Button buttonAction={goToShipping} type='primary'>
             Proceed to checkout
-          </button>
-          <button className='text-[#006CA2] underline underline-offset-4 lg:text-[28px]'>
+          </Button>
+
+          <Button buttonAction={null} type='secondary'>
             Continue shopping
-          </button>
+          </Button>
         </div>
       </div>
     </div>
