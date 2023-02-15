@@ -19,7 +19,7 @@ const MarketCart = () => {
       </ul>
 
       {/* Cart Details */}
-      <div className='fixed bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black'>
+      <div className='fixed lg:hidden bg-white bottom-0 left-0 right-0 px-5 pb-10 pt-5 z-40 shadow-2xl shadow-black'>
         <ul className='text-xl text-[#888888]'>
           <li className='cart-list'>
             Products in cart: <span>4 items</span>
