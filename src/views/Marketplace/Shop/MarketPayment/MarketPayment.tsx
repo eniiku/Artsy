@@ -7,7 +7,7 @@ const MarketPayment = () => {
   return (
     <div>
       <div className='lg:flex lg:justify-between lg:items-center lg:mt-16'>
-        <h4 className='first-letter:uppercase font-satoshi font-medium text-[28px] hidden lg:block'>
+        <h4 className='first-letter:uppercase font-satoshi font-medium text-[28px] hidden mb-10 lg:block '>
           payment method
         </h4>
 
@@ -42,7 +42,7 @@ const MarketPayment = () => {
               payment summary
             </h1>
 
-            <div className='border-t-[0.3px] border-[#747474] py-10'>
+            <div className='border-t-[0.3px] border-[#747474] py-14'>
               <h3 className='text-[26px] text-dark_gray_clr-700 mb-4'>
                 Metamask wallet : 002345KJi90pzzz3
               </h3>
@@ -53,7 +53,7 @@ const MarketPayment = () => {
             </div>
 
             <div className='border-y-[0.3px] border-[#747474]'>
-              <p className='text-2xl text-dark_gray_clr-700 py-10 leading-[1.75]'>
+              <p className='text-2xl text-dark_gray_clr-700 py-14 leading-[1.75]'>
                 Expected arrival date: Between 22nd September and 26th September
                 20222
               </p>
