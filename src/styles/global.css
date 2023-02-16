@@ -43,15 +43,16 @@ padding: .7rem 2.4rem
 
   /* style form elements in src/views/Marketplace/Shop/components/Form.tsx */
   .form-container {
-    @apply flex flex-col gap-4 my-8
+    @apply flex flex-col gap-4 lg:gap-6 my-8
   }
 
   .form-label {
-    @apply text-[#888888] font-satoshi text-xl first-letter:uppercase
+    @apply text-[#888888] font-satoshi text-xl first-letter:uppercase lg:text-[26px]
   }
 
   .form-input {
-    @apply border-[0.5px] border-[#747474] border-opacity-30 bg-[#F2F2F2] w-full py-3 px-4 rounded-[10px] font-satoshi placeholder:text-[#888888]
+    @apply border-[0.5px] border-[#747474] border-opacity-30 bg-[#F2F2F2] w-full py-3 px-4 rounded-[10px] font-satoshi placeholder:text-[#888888] placeholder:lg:text-[26px]
+    lg:py-6 lg:px-8
   }
 
 }
