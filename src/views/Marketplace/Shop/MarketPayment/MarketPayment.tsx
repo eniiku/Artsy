@@ -1,5 +1,6 @@
 import Button from '../components/Button';
 import lockIcon from '@/assets/icons/crypto/icon-lock.svg';
+import PaymentForm from '../components/PaymentForm';
 
 const MarketPayment = () => {
   return (
@@ -10,7 +11,9 @@ const MarketPayment = () => {
         <h6 className='font-satoshi first-letter:uppercase'>secure server</h6>
       </div>
 
-      <div className='my-10'>{/* Payment Form */}</div>
+      <div className='mb-10'>
+        <PaymentForm />
+      </div>
 
       <div className='text-center mb-8'>
         <Button buttonAction={undefined} type='primary'>
