@@ -21,7 +21,11 @@ const MarketShipping = (props: MarketShippingProps) => {
 
         {/* Button Controls */}
         <div className='flex flex-col items-center gap-8 mt-12 mb-16'>
-          <Button buttonAction={goToPayment} type='primary'>
+          <Button
+            buttonAction={goToPayment}
+            type='primary'
+            className='lg:w-full'
+          >
             Proceed to Payment
           </Button>
 

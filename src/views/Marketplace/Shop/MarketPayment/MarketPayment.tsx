@@ -30,7 +30,11 @@ const MarketPayment = () => {
           <PaymentForm />
 
           <div className='text-center mb-8 mt-10 lg:mb-16 lg:mt-20'>
-            <Button buttonAction={undefined} type='primary'>
+            <Button
+              buttonAction={undefined}
+              type='primary'
+              className='lg:w-full'
+            >
               Confirm
             </Button>
           </div>
