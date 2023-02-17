@@ -42,12 +42,14 @@ const HomePage = () => {
           Featured products
         </h1>
 
-        <div className='lg:grid lg:grid-cols-2 gap-8 lg:border-y-[0.5px] lg:border-dark_gray_clr-200 lg:py-16'>
+        <div className='lg:grid lg:grid-cols-2 gap-8 lg:border-y-[0.5px] lg:border-dark_gray_clr-200 lg:py-16 cursor-pointer w-fit'>
           <div
             aria-label='click to see detailed view of this product on the product page'
-            className='relative'
+            className='relative w-fit '
           >
-            <div className='h-[255px] lg:h-full bg-indigo-400'></div>
+            <div className='min-h-[255px] lg:min-h-[305px] lg:w-[610px] bg-indigo-400'>
+              {/* Image placeholder */}
+            </div>
 
             <div
               className='absolute inset-0 z-30 bg-opacity-40 bg-black text-center'
