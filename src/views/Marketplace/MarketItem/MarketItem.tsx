@@ -3,7 +3,9 @@ const MarketItem = () => {
     <>
       {/* mobile view */}
       <div className='lg:hidden'>
-        <div className='h-[380px] w-full bg-indigo-300'>image placeholder</div>
+        <div className='min-h-[380px] bg-indigo-300'>
+          {/* image placeholder */}
+        </div>
         <div
           className='font-satoshi font-medium uppercase flex justify-between items-center mt-2
           text-dark_gray_clr-200'

@@ -183,7 +183,7 @@ const MarketPage = () => {
             {['', '', '', '', '', '', '', '', '', '']
               .slice(0, 5)
               .map((product, index) => (
-                <div key={index} className='mt-12 lg:mt-0 w-fit'>
+                <div key={index} className='mt-12 lg:mt-0'>
                   {<MarketItem />}
                 </div>
               ))}
@@ -201,7 +201,7 @@ const MarketPage = () => {
               ))}
           </div>
 
-          <div className='lg:hidden'>
+          <div className='lg:hidden mb-16'>
             <button className='font-satoshi font-[20px] float-right'>
               Load more
               <img
@@ -215,7 +215,7 @@ const MarketPage = () => {
       </div>
 
       {/* See more button */}
-      <div className='w-full text-center'>
+      <div className='w-full text-center hidden lg:block'>
         <button className='mt-20 mb-60 font-medium text-3xl linear-btn'>
           See more
         </button>
