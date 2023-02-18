@@ -241,8 +241,8 @@ const HomePage = () => {
           </h1>
 
           <div className=' block lg:flex lg:items-center lg:gap-8 h-full'>
-            <div className='min-h-full w-[10px] bg-light_gray_clr-500 hidden lg:block relative rounded-[50px]'>
-              <div className='h-1/4 absolute bottom-0 bg-dark_gray_clr-300'></div>
+            <div className='min-h-[300px] min-w-[10px] bg-light_gray_clr-500 hidden lg:block relative rounded-full z-0'>
+              <div className='min-h-[50px] min-w-[10px] absolute bottom-0 bg-dark_gray_clr-300 z-30 rounded-full'></div>
             </div>
 
             <ul
