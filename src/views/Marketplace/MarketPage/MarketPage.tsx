@@ -6,6 +6,7 @@ import searchIcon from '@/assets/icons/navigation/icon-search.svg';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 import chevronUpIcon from '@/assets/icons/chevron/icon-chevron-up-outlined.svg';
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
+import { Link } from 'react-router-dom';
 
 const MarketPage = () => {
   return (
@@ -180,24 +181,46 @@ const MarketPage = () => {
           {/* List of Products on Mobile view*/}
 
           <div className='mb-10 products-grid-items lg:hidden'>
-            {['', '', '', '', '', '', '', '', '', '']
+            {[
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+            ]
               .slice(0, 5)
               .map((product, index) => (
-                <div key={index} className='mt-12 lg:mt-0'>
-                  {<MarketItem />}
-                </div>
+                <Link to={product} key={index}>
+                  <div className='mt-12 lg:mt-0'>{<MarketItem />}</div>
+                </Link>
               ))}
           </div>
 
           {/* List of Products on Desktop View */}
 
           <div className='mb-10 products-grid-items hidden lg:grid'>
-            {['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+            {[
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+              'boolean-egyptian',
+            ]
               .slice(0, 9)
               .map((product, index) => (
-                <div key={index} className='mt-12 lg:mt-0 w-fit'>
-                  {<MarketItem />}
-                </div>
+                <Link to={product} key={index}>
+                  <div className='mt-12 lg:mt-0 w-fit'>{<MarketItem />}</div>
+                </Link>
               ))}
           </div>
 
