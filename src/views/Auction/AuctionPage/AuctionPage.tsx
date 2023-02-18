@@ -3,6 +3,7 @@ import LiveCard from '../components/LiveCard/LiveCard';
 import BidsCard from '../components/BidsCard/BidsCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
+import { Link } from 'react-router-dom';
 
 const AuctionPage = () => {
   return (
@@ -21,9 +22,11 @@ const AuctionPage = () => {
         </p>
 
         <ul className='flex gap-12 overflow-hidden my-12'>
-          {['', '', '', '', '', '', '', ''].map((item, index) => (
+          {['auc1', 'auc2', 'auc3', 'auc4', 'auc5'].map((item, index) => (
             <li key={index}>
-              <LiveCard />
+              <Link to={`live/${item}`}>
+                <LiveCard />
+              </Link>
             </li>
           ))}
         </ul>
