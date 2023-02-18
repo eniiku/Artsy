@@ -21,14 +21,26 @@
 
 /* create gradient for marketplace button component */
 
-.linear-btn {
-background: linear-gradient(94.97deg, #78A3AD 24.64%, rgba(192, 86, 9, 0.49) 118.54%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-border-radius: 10px;
-border: 2px solid;
-padding: .7rem 2.4rem
+.module-border-wrap {
+  background: linear-gradient(94.97deg, #78A3AD 24.64%, rgba(192, 86, 9, 0.49) 118.54%);
+  position: relative;
+  border-radius: 16px;
+  padding: 3px;
+}
+
+
+.module {
+  background:white;
+  padding: 1.4rem 6rem;
+  border-radius: 15px;
+}
+
+.gradient-text {
+  background-color:rgba(192, 86, 9, 0.49);
+  background-image: linear-gradient(94.97deg, #78A3AD 24.64%, rgba(192, 86, 9, 0.49) 118.54%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
 }
 
 /* Style List items in src/views/Marketplace/MarketCart/MarketCart.tsx */

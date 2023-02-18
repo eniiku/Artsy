@@ -20,7 +20,7 @@ const MarketItemDetails = () => {
       <MarketItemCard />
 
       {/* Explore more */}
-      <div className='font-satoshi font-medium px-3 mb-64 lg:m-0 lg:o-0'>
+      <div className='font-satoshi font-medium mb-64 lg:m-0 lg:o-0'>
         <div className='lg:bg-white lg:shadow-2xl lg:my-28 lg:py-8 lg:px-6 lg:rounded-2xl'>
           <p className='text-2xl mb-8 lg:hidden'>More from this collection</p>
 
@@ -37,7 +37,10 @@ const MarketItemDetails = () => {
         <div className='overflow-hidden'>
           <ul className='flex gap-12'>
             {['', '', '', '', ''].map((item, index) => (
-              <li key={index} className='w-[530px] flex-none'>
+              <li
+                key={index}
+                className='min-w-full min-h-[510px] lg:min-w-[530px] lg:min-h-[580px] flex-none'
+              >
                 <MarketItemFeat />
               </li>
             ))}
@@ -45,11 +48,12 @@ const MarketItemDetails = () => {
         </div>
       </div>
 
-      {/* explore all button
-       */}
+      {/* explore all button */}
       <div className='hidden lg:block text-center'>
-        <button className='linear-btn font-satoshi font-medium text-4xl my-16'>
-          Explore all
+        <button className='module-border-wrap font-satoshi font-medium text-4xl my-16'>
+          <div className='module'>
+            <span className='gradient-text'>Explore all</span>
+          </div>
         </button>
       </div>
     </div>
