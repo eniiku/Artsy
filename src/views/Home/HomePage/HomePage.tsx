@@ -229,7 +229,7 @@ const HomePage = () => {
 
       <section
         aria-label='showcase of the best creators for the week'
-        className='bg-light_gray_clr-300 -mx-3 relative h-[250px] overflow-hidden lg:-mx-24
+        className='bg-light_gray_clr-300 bg-opacity-50 -mx-5 relative h-[250px] overflow-hidden lg:-mx-24
           lg:h-[922px] lg:p-20 lg:overflow-visible'
       >
         <div className='flex items-start justify-between'>
@@ -261,7 +261,7 @@ const HomePage = () => {
         </div>
 
         <div
-          className='font-clash_display font-extralight text-[13px] text-opacity-50 text-center
+          className='font-clash_display font-extralight text-[13px] text-black text-opacity-60 text-center
           lg:text-[32px] lg:my-8 lg:text-left'
         >
           “Everything always looked better in black and white. Everything always
@@ -279,7 +279,7 @@ const HomePage = () => {
             circa
           </p>
 
-          <p className='text-[60px] line-through text-dark_gray_clr-700 lg:text-[170px]'>
+          <p className='text-[60px] line-through text-dark_gray_clr-600 lg:text-[170px]'>
             1985
           </p>
         </div>
