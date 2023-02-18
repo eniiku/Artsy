@@ -111,7 +111,7 @@ const HomePage = () => {
 
       <section
         aria-label='showcase of featured auction event'
-        className='-mx-3 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] p-10 text-white overflow-hidden
+        className='-mx-5 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] px-8 py-10 text-white overflow-hidden
           lg:-mx-24 lg:h-[780px] lg:px-20 lg:flex lg:flex-col lg:justify-evenly lg:gap-4'
       >
         <h1 className='hidden lg:block font-satoshi font-medium text-[40px] relative pb-8 w-fit'>
@@ -127,26 +127,26 @@ const HomePage = () => {
         {/* TODO: update background image for section*/}
 
         <div className='lg:flex lg:items-end lg:flex-1 lg:border lg:border-black bg-blend-overlay bg-black bg-opacity-50'>
-          <div className='lg:w-full lg:px-10 lg:pb-12 lg:flex lg:justify-between lg:items-end'>
+          <div className='lg:w-full py-6 px-4 lg:px-10 lg:pb-12 lg:flex lg:justify-between lg:items-end'>
             <div className='lg:flex lg:items-center lg:gap-4 lg:w-3/5'>
               <div className='hidden lg:block font-bellefair text-[67px] text-[#E1E1E1] text-opacity-30'>
                 01
               </div>
 
               <div>
-                <div className='flex items-center gap-8 pr-8 lg:relative'>
+                <div className='flex items-start gap-8 lg:relative'>
                   <div
-                    className='w-[16px] h-[16px] bg-white rounded-full lg:absolute lg:top-1 lg:-left-8'
+                    className='min-w-[16px] min-h-[16px] bg-white rounded-full lg:absolute lg:top-1 lg:-left-8 mt-1'
                     aria-hidden
                   ></div>
 
-                  <h3 className='font-bellefair text-xl lg:text[26px] lg:w-[22ch] lg:text-left'>
+                  <h3 className='font-bellefair text-xl lg:text[26px]'>
                     MONALISA REDEFINED IN STYLE.
                   </h3>
                 </div>
 
                 <div className='flex items-start gap-2 mt-4'>
-                  <div className=' font-bellefair text-[40px] lg:text-[67px] lg:hidden'>
+                  <div className='font-bellefair text-[40px] lg:text-[67px] lg:hidden -mt-2'>
                     01
                   </div>
 
