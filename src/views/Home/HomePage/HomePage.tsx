@@ -125,7 +125,6 @@ const HomePage = () => {
         </h1>
 
         {/* TODO: update background image for section*/}
-
         <div className='lg:flex lg:items-end lg:flex-1 lg:border lg:border-black bg-blend-overlay bg-black bg-opacity-50'>
           <div className='lg:w-full py-6 px-4 lg:px-10 lg:pb-12 lg:flex lg:justify-between lg:items-end'>
             <div className='lg:flex lg:items-center lg:gap-4 lg:w-3/5'>
@@ -136,11 +135,11 @@ const HomePage = () => {
               <div>
                 <div className='flex items-start gap-8 lg:relative'>
                   <div
-                    className='min-w-[16px] min-h-[16px] bg-white rounded-full lg:absolute lg:top-1 lg:-left-8 mt-1'
+                    className='min-w-[16px] min-h-[16px] bg-white rounded-full lg:absolute lg:top-1 lg:-left-8 mt-1 lg:mt-0'
                     aria-hidden
                   ></div>
 
-                  <h3 className='font-bellefair text-xl lg:text[26px]'>
+                  <h3 className='font-bellefair text-xl lg:text-[30px]'>
                     MONALISA REDEFINED IN STYLE.
                   </h3>
                 </div>
@@ -151,7 +150,7 @@ const HomePage = () => {
                   </div>
 
                   <div>
-                    <p className='font-poppins text-xs uppercase lg:text-[13px]'>
+                    <p className='font-poppins text-xs uppercase lg:text-[14px]'>
                       Start on : 08:00 GTS . Monday
                     </p>
 
@@ -184,7 +183,9 @@ const HomePage = () => {
         -create slider to integrate with controls */}
 
         <div className='hidden lg:flex items-center justify-between mt-4'>
-          <div>slider</div>
+          <div className='bg-light_gray_clr-500 rounded-full min-w-[290px] min-h-[10px]'>
+            <div className='bg-white max-w-[50px] min-h-[10px] rounded-full'></div>
+          </div>
 
           <div>
             <button
