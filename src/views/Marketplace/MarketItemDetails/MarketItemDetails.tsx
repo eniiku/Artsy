@@ -5,13 +5,16 @@ import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left.svg';
 import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right.svg';
 import MarketItemCard from '../MarketItem/MarketItemCard';
 import MarketItemFeat from '../MarketItem/MarketItemFeat';
+import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
 
 const MarketItemDetails = () => {
   const { id } = useParams();
 
   return (
     <div className={`${styles.xPadding}`}>
-      <div className='mt-4 mb-3 lg:mb-16'>breadcrumbs</div>
+      <div className='mt-4 mb-3 lg:mb-16'>
+        <Breadcrumbs />
+      </div>
 
       {/* Product Details Card */}
       <MarketItemCard />

@@ -2,13 +2,16 @@ import styles from '@/styles';
 import LiveCard from '../components/LiveCard/LiveCard';
 import BidsCard from '../components/BidsCard/BidsCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
 
 const AuctionPage = () => {
   return (
     <div
       className={`font-satoshi font-medium text-xl text-dark_gray_clr-200 ${styles.xPadding} lg:text-[28px]`}
     >
-      <div className='mt-6'>breadcrumbs</div>
+      <div className='mt-6'>
+        <Breadcrumbs />
+      </div>
 
       {/* Live Auction */}
 

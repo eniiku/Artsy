@@ -56,3 +56,25 @@ padding: .7rem 2.4rem
   }
 
 }
+
+/* create styling for breadcrumbs in src/components/Breadcrumbs */
+
+.breadcrumb-not-active {
+  color: #BCB7B7;
+}
+
+.breadcrumb-active {
+  color: #000000;
+}
+  
+.breadcrumb-arrow {
+  color: #BCB7B7;
+  margin-right: 4px;
+}
+
+
+@media screen and (min-width: 1024px) {  
+  .breadcrumb-arrow {
+    margin-right: 8px;
+  }
+}

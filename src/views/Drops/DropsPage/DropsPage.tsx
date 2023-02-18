@@ -2,11 +2,14 @@ import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.s
 import DropsCard from '../DropsCard/DropsCard';
 import styles from '../../../styles';
 import { Footer } from '../../../components/layout';
+import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
 
 const DropsPage = () => {
   return (
     <div className={`font-satoshi ${styles.xPadding}`}>
-      <div>breadcrumbs</div>
+      <div>
+        <Breadcrumbs />
+      </div>
 
       <div className='text-center'>
         <h1 className='font-bold text-3xl lg:text-5xl'>Upcoming drops</h1>
