@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <section
       aria-label='subscribe to our daily newsletter'
-      className='pt-16 pb-4 px-4 text-dark_gray_clr-200 lg:mt-24 lg:mb-8 lg:p-0'
+      className='pt-16 pb-4 text-dark_gray_clr-200 lg:mt-24 lg:mb-8 lg:p-0'
     >
       <div className='lg:border border-dark_gray_clr-200 md:py-12 md:px-52'>
         <h1
@@ -18,7 +18,7 @@ const Footer = () => {
         </h1>
 
         <p
-          className='font-satoshi text-[11px] mt-3 uppercase lg:text-[32px] md:text-center 
+          className='font-satoshi text-xs mt-3 uppercase lg:text-[32px] md:text-center 
           lg:normal-case md:mt-6'
         >
           Subscribe to get daily updates on new drops & exciting deals
@@ -31,7 +31,7 @@ const Footer = () => {
           <div className='relative w-full'>
             <label
               htmlFor='newsletter'
-              className='font-satoshi text-[10px] uppercase lg:text-base absolute top-[28%] left-16'
+              className='font-satoshi text-[10px] uppercase lg:text-base absolute top-[32%] left-6 lg:top-[28%] lg:left-10'
             >
               enter your email here
             </label>
@@ -44,7 +44,7 @@ const Footer = () => {
 
           <button
             className='py-4 px-12 bg-dark_gray_clr-500 uppercase text-white
-            font-satoshi text-[11px] mt-8 lg:mt-0 lg:text-base'
+            font-satoshi text-sm mt-8 lg:mt-0 lg:text-base'
           >
             subscribe
           </button>
@@ -54,11 +54,13 @@ const Footer = () => {
       <div className='mt-8 lg:hidden'>
         <h3 className='uppercase font-poppins font-light'>reach us</h3>
 
-        <div className='text-[11px] mt-3'>
+        <div className='text-sm mt-3'>
           <div className='flex items-center gap-4 mb-4'>
             <img src={mailIcon} role='presentation' className='w-7' />
 
-            <p className='font-satoshi text-[26px]'>artsystudios@gmail.com</p>
+            <p className='font-satoshi lg:text-[26px]'>
+              artsystudios@gmail.com
+            </p>
           </div>
 
           <div className='flex items-center gap-4 mb-4'>
