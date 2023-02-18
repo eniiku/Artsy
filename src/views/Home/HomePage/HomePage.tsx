@@ -1,3 +1,5 @@
+import { Link as RRLink } from 'react-router-dom';
+
 import styles from '@/styles';
 import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
 import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
@@ -42,58 +44,66 @@ const HomePage = () => {
           Featured products
         </h1>
 
-        <div className='lg:grid lg:grid-cols-2 gap-8 lg:border-y-[0.5px] lg:border-dark_gray_clr-200 lg:py-16 cursor-pointer w-fit'>
-          <div
-            aria-label='click to see detailed view of this product on the product page'
-            className='relative w-fit '
-          >
-            <div className='min-h-[255px] lg:min-h-[305px] lg:w-[610px] bg-indigo-400'>
-              {/* Image placeholder */}
-            </div>
-
-            <div
-              className='absolute inset-0 z-30 bg-opacity-40 bg-black text-center'
-              aria-hidden
+        <div className='lg:flex lg:flex-col'>
+          {[1, 2, 3].map((product) => (
+            <RRLink
+              key={product}
+              to='/marketplace/boolean-egyptian'
+              className='lg:grid lg:grid-cols-2 gap-8 lg:border-t-[0.5px] lg:border-dark_gray_clr-200 lg:py-16 cursor-pointer w-fit reverse'
             >
-              <h1
-                className='font-clash_display font-semibold text-3xl text-white mt-11
-                lg:hidden'
+              <div
+                aria-label='click to see detailed view of this product on the product page'
+                className='relative max-w-full'
               >
-                Boolean Egyptian
-              </h1>
+                <div className='min-h-[255px] lg:min-h-[305px] lg:max-w-[610px] bg-indigo-400'>
+                  {/* Image placeholder */}
+                </div>
 
-              <div className='flex items-center justify-center h-full'>
-                <h1 className='font-clash_display text-3xl text-white hidden lg:block'>
-                  View product
-                </h1>
+                <div
+                  className='absolute inset-0 z-30 bg-opacity-40 bg-black text-center'
+                  aria-hidden
+                >
+                  <h1
+                    className='font-clash_display font-semibold text-3xl text-white mt-11
+                lg:hidden'
+                  >
+                    Boolean Egyptian
+                  </h1>
+
+                  <div className='flex items-center justify-center h-full'>
+                    <h1 className='font-clash_display text-3xl text-white hidden lg:block'>
+                      View product
+                    </h1>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div className='lg:text-left lg:flex lg:flex-col lg:justify-between'>
-            <h1 className='hidden lg:block font-stix text-[40px] text-dark_gray_clr-200'>
-              The Boolean Egytian
-            </h1>
+              <div className='lg:text-left lg:flex lg:flex-col lg:justify-between'>
+                <h1 className='hidden lg:block font-stix text-[40px] text-dark_gray_clr-200'>
+                  The Boolean Egytian
+                </h1>
 
-            <p
-              className='font-satoshi text-[15px] text-light_gray_clr-700 text-left my-3 w-11/12
-              lg:text-2xl lg:text-dark_gray_clr-200'
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-              urna, porttitor rhoncus dolor pur
-            </p>
+                <p
+                  className='font-satoshi text-[15px] text-light_gray_clr-700 text-left my-3 w-11/12
+                  lg:text-2xl lg:text-dark_gray_clr-200'
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                  aliquam, purus sit amet luctus venenatis, lectus magna
+                  fringilla urna, porttitor rhoncus dolor pur
+                </p>
 
-            <div
-              className='flex items-center gap-4 border-b border-b-black w-fit pr-3 pb-2 mb-8
-            lg:border-0  lg:mb-0 lg:p-0'
-            >
-              avatars
-              <h3 className='font-satoshi font-medium lg:text-2xl'>
-                64 major creators
-              </h3>
-            </div>
-          </div>
+                <div
+                  className='flex items-center gap-4 border-b border-b-black w-fit pr-3 pb-2 mb-8
+                  lg:border-0  lg:mb-0 lg:p-0'
+                >
+                  avatars
+                  <h3 className='font-satoshi font-medium lg:text-2xl'>
+                    64 major creators
+                  </h3>
+                </div>
+              </div>
+            </RRLink>
+          ))}
         </div>
       </section>
 
