@@ -11,35 +11,36 @@ import { Link } from 'react-router-dom';
 const MarketPage = () => {
   return (
     <div>
-      {/* Mobile sorting controls */}
-      <div className='lg:hidden'>
-        <h3 className='font-poppins italic text-light_gray_clr-100 mb-4'>
-          Showing 1-5 of 18 results
-        </h3>
+      {/* Sorting controls */}
+      <div>
+        {/* Mobile Sorting controls */}
+        <div className='lg:hidden'>
+          <h3 className='font-poppins italic text-light_gray_clr-100 mb-4'>
+            Showing 1-5 of 18 results
+          </h3>
 
-        <div
-          className='flex justify-between bg-white py-4 px-6 rounded-2xl shadow-xl
+          <div
+            className='flex justify-between bg-white py-4 px-6 rounded-2xl shadow-xl
           border border-[#eee] border-opacity-30'
-        >
-          {['Filters', 'Sort by'].map((item) => (
-            <div
-              key={item}
-              className='flex gap-2 items-center font-satoshi text-[18px]'
-            >
-              {item}
-              <img
-                src={chevronDownIcon}
-                role='presentation'
-                className='w-[34px]'
-              />
-            </div>
-          ))}
+          >
+            {['Filters', 'Sort by'].map((item) => (
+              <div
+                key={item}
+                className='flex gap-2 items-center font-satoshi text-[18px]'
+              >
+                {item}
+                <img
+                  src={chevronDownIcon}
+                  role='presentation'
+                  className='w-[34px]'
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Desktop search and sort controls */}
-        <div
-          className={`hidden lg:grid products-grid items-center font-satoshi text-2xl ${styles.xPadding}`}
-        >
+        <div className='hidden products-grid items-center font-satoshi text-2xl'>
           <form className='w-full'>
             <div className='w-[90%] relative px-6 py-3 flex items-center rounded-2xl bg-light_gray_clr-200'>
               <label htmlFor='search' className='flex items-center gap-2'>
@@ -75,12 +76,10 @@ const MarketPage = () => {
         </div>
       </div>
 
-      <div
-        className={`${styles.xPadding} products-grid items-start lg:mt-16 h-fit`}
-      >
+      <div className='products-grid lg:mt-16'>
         {/* Preferences controls/section */}
 
-        <div className='font-satoshi hidden lg:block h-full overflow-y-hidden'>
+        <div className='font-satoshi hidden lg:block h-full overflow-y-hidden w-[90%]'>
           {/* Filter */}
           <div>
             <h1 className='font-medium text-[32px] flex items-center gap-2'>
@@ -177,7 +176,7 @@ const MarketPage = () => {
         </div>
 
         {/* Products Overview */}
-        <div className='mt-8 lg:mt-0'>
+        <div className='mt-8 lg:mt-0 lg:flex-grow'>
           {/* List of Products on Mobile view*/}
 
           <div className='mb-10 products-grid-items lg:hidden'>
@@ -203,7 +202,7 @@ const MarketPage = () => {
 
           {/* List of Products on Desktop View */}
 
-          <div className='mb-10 products-grid-items hidden lg:grid'>
+          <div className='mb-10 products-grid-items'>
             {[
               'boolean-egyptian',
               'boolean-egyptian',
@@ -239,8 +238,10 @@ const MarketPage = () => {
 
       {/* See more button */}
       <div className='w-full text-center hidden lg:block'>
-        <button className='mt-20 mb-60 font-medium text-3xl linear-btn'>
-          See more
+        <button className='mt-20 mb-24 font-medium text-3xl module-border-wrap'>
+          <div className='px-16 py-5 bg-white rounded-[15px]'>
+            <span className='gradient-text'>See more</span>
+          </div>
         </button>
       </div>
 
