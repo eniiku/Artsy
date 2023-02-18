@@ -1,9 +1,11 @@
-import { Link as RRLink } from 'react-router-dom';
+import { json, Link as RRLink } from 'react-router-dom';
 
 import styles from '@/styles';
 import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
 import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
+import arrowOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 import { Link, Footer } from '@/components/layout';
+import products from '@/data/products.json';
 
 const HomePage = () => {
   return (
@@ -45,10 +47,10 @@ const HomePage = () => {
         </h1>
 
         <div className='lg:flex lg:flex-col'>
-          {[1, 2, 3].map((product) => (
+          {products.featured_products.map((product) => (
             <RRLink
-              key={product}
-              to='/marketplace/boolean-egyptian'
+              key={product.id}
+              to={`/marketplace/boolean-egyptian`}
               className='lg:grid lg:grid-cols-2 gap-8 lg:border-t-[0.5px] lg:border-dark_gray_clr-200 lg:py-16 cursor-pointer w-fit reverse'
             >
               <div
@@ -57,6 +59,11 @@ const HomePage = () => {
               >
                 <div className='min-h-[255px] lg:min-h-[305px] lg:max-w-[610px] bg-indigo-400'>
                   {/* Image placeholder */}
+                  <img
+                    src={product.url}
+                    alt=' '
+                    className=' object-cover object-center h-[255px] lg:h-[305px] lg:w-[610px]'
+                  />
                 </div>
 
                 <div
