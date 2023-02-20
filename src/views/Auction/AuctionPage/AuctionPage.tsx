@@ -1,4 +1,5 @@
 import styles from '@/styles';
+import auctionData from '@/data/auction.json';
 import LiveCard from '../components/LiveCard/LiveCard';
 import BidsCard from '../components/BidsCard/BidsCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
@@ -22,10 +23,10 @@ const AuctionPage = () => {
         </p>
 
         <ul className='flex gap-12 overflow-hidden my-12'>
-          {['auc1', 'auc2', 'auc3', 'auc4', 'auc5'].map((item, index) => (
-            <li key={index}>
-              <Link to={`live/${item}`}>
-                <LiveCard />
+          {auctionData.products.map((product) => (
+            <li key={product.id}>
+              <Link to={`live/${product.id}`}>
+                <LiveCard url={product.url} />
               </Link>
             </li>
           ))}
