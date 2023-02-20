@@ -8,6 +8,7 @@ import creator1 from '@/assets/images/icon-creator-1.png';
 import creator2 from '@/assets/images/icon-creator-2.png';
 import creator3 from '@/assets/images/icon-creator-3.png';
 import { Link, Footer } from '@/components/layout';
+import carouselData from '@/data/carousel.json';
 import products from '@/data/products.json';
 
 const HomePage = () => {
@@ -34,8 +35,10 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className='h-[355px] bg-black mt-6 mb-28 lg:mt-32 lg:mb-36'>
-          images
+        <div className='lg:grid lg:grid-cols-4 lg:gap-8 mt-6 mb-28 lg:mt-32 lg:mb-36'>
+          {carouselData.carousel.map((image) => (
+            <img key={image.id} alt=' ' src={image.url} />
+          ))}
         </div>
       </section>
 
@@ -196,7 +199,7 @@ const HomePage = () => {
           <div className='bg-light_gray_clr-500 rounded-full min-w-[290px] min-h-[10px]'>
             <div className='bg-white max-w-[50px] min-h-[10px] rounded-full'></div>
           </div>
-
+          HTMLDivElement
           <div>
             <button
               className='w-[70px] h-[70px] rounded-full text-center bg-white bg-opacity-20 backdrop-blur-lg
