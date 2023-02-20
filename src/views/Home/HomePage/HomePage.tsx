@@ -4,6 +4,9 @@ import styles from '@/styles';
 import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
 import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
 import arrowOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import creator1 from '@/assets/images/icon-creator-1.png';
+import creator2 from '@/assets/images/icon-creator-2.png';
+import creator3 from '@/assets/images/icon-creator-3.png';
 import { Link, Footer } from '@/components/layout';
 import products from '@/data/products.json';
 
@@ -291,7 +294,16 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className='absolute z-30 bottom-0 left-[40%] w-[40px] h-[150px] bg-black lg:left-[50%] lg:-bottom-12'></div>
+        <div>
+          {[creator1, creator2, creator3].map((creator) => (
+            <img
+              key={creator}
+              src={creator}
+              alt=' '
+              className='hidden lg:block absolute z-30 w-[70%] lg:-bottom-12'
+            />
+          ))}
+        </div>
       </section>
 
       {/* Footer Section */}
