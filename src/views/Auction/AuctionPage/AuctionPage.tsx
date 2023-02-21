@@ -39,9 +39,16 @@ const AuctionPage = () => {
         </h3>
 
         <ul className='lg:grid lg:grid-cols-2 lg:gap-20'>
-          {['', '', '', '', '', '', '', ''].slice(0, 3).map((item, index) => (
-            <li key={index} className='mt-6'>
-              <BidsCard />
+          {auctionData.bids.map((product) => (
+            <li key={product.id} className='mt-6'>
+              <BidsCard
+                url={product.url}
+                text={product.name}
+                price={product.bid.current?.eth}
+                creator={product.creator}
+                date={product.date}
+                bid={product.bid.highest.eth}
+              />
             </li>
           ))}
         </ul>
