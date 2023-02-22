@@ -4,7 +4,17 @@ import arrowRightOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right-outl
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
 import MarketItem from '../MarketItem/MarketItem';
 
-const MarketItemCard = () => {
+interface MarketItemCardProps {
+  url: string;
+  name: string;
+  price: number;
+  creator: string;
+  origin: string;
+}
+
+const MarketItemCard = (props: MarketItemCardProps) => {
+  const { url, name, price, origin, creator } = props;
+
   return (
     <div
       className='font-satoshi font-medium lg:border border-dark_gray_clr-200 lg:grid
@@ -16,13 +26,19 @@ const MarketItemCard = () => {
         {/* Image Mobile View */}
 
         <div className='lg:hidden'>
-          <MarketItem />
+          <MarketItem url={url} name={name} price={price} />
         </div>
 
         {/* image Desktop view */}
 
         <div className='hidden lg:block py-8 px-4 border-r border-dark_gray_clr-200 h-full'>
-          <div className='bg-indigo-300 w-full h-full'>image placeholder</div>
+          <div className='bg-indigo-300 w-full h-full'>
+            <img
+              src={url}
+              alt=' '
+              className='w-full h-full object-cover object-center'
+            />
+          </div>
         </div>
       </div>
 
@@ -33,14 +49,14 @@ const MarketItemCard = () => {
           className='hidden lg:flex text-dark_gray_clr border-b border-dark_gray_clr-200
             items-center justify-between px-8 py-10'
         >
-          <h3 className='font-satoshi font-bold text-[46px]'>
-            Boolean Egyptian
+          <h3 className='font-satoshi font-bold text-[46px] capitalize'>
+            {name}
           </h3>
 
           <div className='flex gap-[10px] items-center'>
             <img src={ethIcon} role='presentation' className='h-[40px]' />
             <h3 className='font-stix font-medium text-[40px] text-center'>
-              0.09
+              {price}
             </h3>
           </div>
         </div>
@@ -49,11 +65,11 @@ const MarketItemCard = () => {
           <ul>
             <li className='mt-5 text-black lg:text-3xl lg:mt-0'>
               Creator:{' '}
-              <span className=' text-[#006CA2] capitalize'>Ali Dawa</span>
+              <span className=' text-[#006CA2] capitalize'>{creator}</span>
             </li>
 
-            <li className='mt-5 text-light_gray_clr-700 lg:text-black lg:text-2xl lg:mt-8'>
-              Made in Italy
+            <li className='mt-5 text-light_gray_clr-700 lg:text-black lg:text-2xl lg:mt-8 capitalize'>
+              {origin}
             </li>
 
             <li className='mt-5 text-light_gray_clr-700 lg:text-black lg:text-[28px] lg:my-8'>
