@@ -6,6 +6,7 @@ import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right.svg';
 import MarketItemCard from '../MarketItem/MarketItemCard';
 import MarketItemFeat from '../MarketItem/MarketItemFeat';
 import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
+import ProductData from '@/data/products.json';
 
 const MarketItemDetails = () => {
   const { id } = useParams();
@@ -36,14 +37,20 @@ const MarketItemDetails = () => {
 
         <div className='overflow-hidden'>
           <ul className='flex gap-12'>
-            {['', '', '', '', ''].map((item, index) => (
-              <li
-                key={index}
-                className='min-w-full min-h-[510px] lg:min-w-[530px] lg:min-h-[580px] flex-none'
-              >
-                <MarketItemFeat />
-              </li>
-            ))}
+            {ProductData.products
+              .sort(() => Math.random() - 0.5)
+              .map((item) => (
+                <li
+                  key={item.id}
+                  className='min-w-full min-h-[510px] lg:min-w-[530px] lg:min-h-[580px] flex-none'
+                >
+                  <MarketItemFeat
+                    url={item.url}
+                    text={item.name}
+                    price={item.price.eth}
+                  />
+                </li>
+              ))}
           </ul>
         </div>
       </div>
