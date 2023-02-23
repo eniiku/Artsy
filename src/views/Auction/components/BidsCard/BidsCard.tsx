@@ -1,5 +1,4 @@
 import likeIcon from '@/assets/icons/product/icon-like.svg';
-import ProductCard from '@/views/Marketplace/Shop/components/ProductCard';
 
 interface BidsCardProps {
   url: string | undefined;

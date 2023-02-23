@@ -1,11 +1,13 @@
-import ProductCard from './ProductCard';
+import { useCart } from '@/context/CartContext';
+import ProductCard from './CartItem';
 
 const CartList = () => {
+  const { cartItems } = useCart();
   return (
     <ul className='my-24 lg:mb-0'>
-      {[1, 2, 3, 4, 5].map((product) => (
-        <li key={product} className='my-14'>
-          <ProductCard />
+      {cartItems.map((product) => (
+        <li key={product.id} className='my-14'>
+          <ProductCard id={product.id} quantity={product.quantity} />
         </li>
       ))}
     </ul>

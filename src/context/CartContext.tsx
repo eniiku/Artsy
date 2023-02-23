@@ -4,16 +4,17 @@ interface CartProviderProps {
   children: React.ReactNode;
 }
 
+interface CartItem {
+  id: string;
+  quantity: number;
+}
+
 interface CartContext {
   getItemQuantity: (id: string) => number;
   increaseCartQuantity: (id: string) => void;
   decreaseCartQuantity: (id: string) => void;
   removeFromCart: (id: string) => void;
-}
-
-interface CartItem {
-  id: string;
-  quantity: number;
+  cartItems: CartItem[];
 }
 
 const CartContext = React.createContext({} as CartContext);
@@ -72,6 +73,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeFromCart,
+        cartItems,
       }}
     >
       {children}
