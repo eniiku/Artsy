@@ -3,7 +3,7 @@ import ProductCard from '@/views/Marketplace/Shop/components/ProductCard';
 
 interface BidsCardProps {
   url: string | undefined;
-  price: number;
+  price: number | undefined;
   creator: string;
   date: {
     day: number;
