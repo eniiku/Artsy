@@ -1,8 +1,9 @@
-import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
-import DropsCard from '../DropsCard/DropsCard';
 import styles from '../../../styles';
+import dropsData from '@/data/drops.json';
+import DropsCard from '../DropsCard/DropsCard';
 import { Footer } from '../../../components/layout';
 import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
+import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
 
 const DropsPage = () => {
   return (
@@ -34,9 +35,13 @@ const DropsPage = () => {
 
       {/* Drops Card Section */}
       <ul className='mt-16'>
-        {[1, 2, 3, 4].map((card) => (
-          <li key={card} className='mb-14 lg:mb-28'>
-            <DropsCard />
+        {dropsData.map((item) => (
+          <li key={item.id} className='mb-14 lg:mb-28'>
+            <DropsCard
+              creator={item.creator}
+              date={item.date}
+              title={item.title}
+            />
           </li>
         ))}
       </ul>

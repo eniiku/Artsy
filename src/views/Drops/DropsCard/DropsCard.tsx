@@ -1,4 +1,17 @@
-const DropsCard = () => {
+interface DropsCardProps {
+  creator: string;
+  title: string;
+  date: {
+    day: number;
+    month: string;
+    time: string;
+    timezone: string;
+  };
+}
+
+const DropsCard = (props: DropsCardProps) => {
+  const { creator, title, date } = props;
+
   return (
     <div className='lg:flex gap-8'>
       <div className='min-h-[225px] lg:min-w-[680px] lg:min-h-[440px] rounded-[10px] bg-green-700 relative font-stix'>
@@ -26,10 +39,10 @@ const DropsCard = () => {
           upcoming
         </div>
 
-        <h3>November 21 at 11 am WAT</h3>
+        <h3 className='first-letter:uppercase'>{`${date.month} ${date.day} at ${date.time} ${date.timezone}`}</h3>
 
-        <h1 className='font-medium text-2xl my-4 lg:text-4xl lg:my-6'>
-          Eyo : Eko For Show
+        <h1 className='font-medium text-2xl my-4 lg:text-4xl lg:my-6 capitalize'>
+          {title}
         </h1>
 
         <p className='text-light_gray_clr-700 lg:w-[60%]'>
@@ -38,7 +51,7 @@ const DropsCard = () => {
         </p>
 
         <h3 className='font-medium text-xl my-4 lg:text-2xl lg:my-6'>
-          Creator : <span className='text-[#006CA2]'>Aliya Minat</span>
+          Creator : <span className='text-[#006CA2] capitalize'>{creator}</span>
         </h3>
 
         <button className='text-[#006CA2] underline underline-offset-4'>
