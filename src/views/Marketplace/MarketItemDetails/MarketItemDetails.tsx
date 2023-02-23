@@ -28,6 +28,7 @@ const MarketItemDetails = () => {
             price={item.price.eth}
             creator={item.creator}
             origin={item.origin}
+            id={item.id}
           />
         ))}
 

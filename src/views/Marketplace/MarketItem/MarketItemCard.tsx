@@ -1,8 +1,9 @@
+import { useCart } from '@/context/CartContext';
+import MarketItem from '../MarketItem/MarketItem';
 import ethIcon from '@/assets/icons/product/ethereum.svg';
 import likeIcon from '@/assets/icons/product/icon-like.svg';
-import arrowRightOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right-outlined.svg';
 import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.svg';
-import MarketItem from '../MarketItem/MarketItem';
+import arrowRightOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right-outlined.svg';
 
 interface MarketItemCardProps {
   url: string;
@@ -10,10 +11,15 @@ interface MarketItemCardProps {
   price: number;
   creator: string;
   origin: string;
+  id: string;
 }
 
 const MarketItemCard = (props: MarketItemCardProps) => {
-  const { url, name, price, origin, creator } = props;
+  const { url, name, price, origin, creator, id } = props;
+
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
+    useCart();
+  const quantity = getItemQuantity(id);
 
   return (
     <div
@@ -80,17 +86,18 @@ const MarketItemCard = (props: MarketItemCardProps) => {
           {/* Cart Control Options */}
           <div>
             <div className='flex items-center justify-start gap-6 text-3xl text-dark_gray_clr-200 my-6 lg:text-4xl'>
-              <button>-</button>
+              <button onClick={() => decreaseCartQuantity(id)}>-</button>
 
-              <h3>1</h3>
+              <h3>{quantity}</h3>
 
-              <button>+</button>
+              <button onClick={() => increaseCartQuantity(id)}>+</button>
             </div>
 
             <div className='flex items-center gap-5'>
               <button
                 className='px-16 py-4 bg-blue_clr-700 text-white rounded-[4px] lg:text-[26px] lg:flex lg:items-center
                   lg:justify-center lg:gap-[10px]'
+                onClick={() => increaseCartQuantity(id)}
               >
                 Add to cart
                 <img
