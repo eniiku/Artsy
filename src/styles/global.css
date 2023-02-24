@@ -4,13 +4,13 @@
 
 /* Create grid for  MarketPage Section */
 
-@media screen and (min-width: 1024px) {  
+@media screen and (min-width: 1024px) {
   .products-grid {
     display: grid;
     grid-template-columns: 20% 80%;
     gap: 2rem;
   }
-  
+
   .products-grid-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -22,57 +22,62 @@
 /* create gradient for marketplace button component */
 
 .module-border-wrap {
-  background: linear-gradient(94.97deg, #78A3AD 24.64%, rgba(192, 86, 9, 0.49) 118.54%);
+  background: linear-gradient(
+    94.97deg,
+    #78a3ad 24.64%,
+    rgba(192, 86, 9, 0.49) 118.54%
+  );
   position: relative;
   border-radius: 16px;
   padding: 3px;
 }
 
-
 .module {
-  background:white;
+  background: white;
   padding: 1.4rem 6rem;
   border-radius: 15px;
 }
 
 .gradient-text {
-  background-color:rgba(192, 86, 9, 0.49);
-  background-image: linear-gradient(94.97deg, #78A3AD 24.64%, rgba(192, 86, 9, 0.49) 118.54%);
+  background-color: rgba(192, 86, 9, 0.49);
+  background-image: linear-gradient(
+    94.97deg,
+    #78a3ad 24.64%,
+    rgba(192, 86, 9, 0.49) 118.54%
+  );
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
 }
 
 /* Style List items in src/views/Marketplace/MarketCart/MarketCart.tsx */
-@layer components{
+@layer components {
   .cart-list {
     @apply flex justify-between my-5 lg:my-8;
   }
-  
-  .cart-list span{
+
+  .cart-list span {
     @apply font-medium text-dark_gray_clr-300;
   }
-  
+
   /* style form elements in src/views/Marketplace/Shop/components/Form.tsx */
   .form-container {
-    @apply flex flex-col gap-4 lg:gap-6 my-8
+    @apply flex flex-col gap-4 lg:gap-6 my-8;
   }
-  
+
   .form-label {
-    @apply text-[#888888] font-satoshi text-xl first-letter:uppercase lg:text-[26px]
+    @apply text-[#888888] font-satoshi text-xl first-letter:uppercase lg:text-[26px];
   }
-  
+
   .form-input {
     @apply border-[0.5px] border-[#747474] border-opacity-30 bg-[#F2F2F2] w-full py-3 px-4 rounded-[10px] font-satoshi placeholder:text-[#888888] placeholder:lg:text-[26px]
-    lg:py-6 lg:px-8
+    lg:py-6 lg:px-8;
   }
-  
 }
 
 /* create styling for breadcrumbs in src/components/Breadcrumbs */
 
 .breadcrumb-not-active {
-  color: #BCB7B7;
+  color: #bcb7b7;
 }
 
 .breadcrumb-active {
@@ -80,12 +85,11 @@
 }
 
 .breadcrumb-arrow {
-  color: #BCB7B7;
+  color: #bcb7b7;
   margin-right: 4px;
 }
 
-
-@media screen and (min-width: 1024px) {  
+@media screen and (min-width: 1024px) {
   .breadcrumb-arrow {
     margin-right: 8px;
   }
@@ -98,5 +102,51 @@
 /* Background gradient for auctions section in homepage */
 
 .bg-gradient {
-  background:  linear-gradient(99.99deg, #4693ED -26.21%, #79C2D2 22.16%, rgba(192, 86, 9, 0.49) 111.62%);
-} 
+  background: linear-gradient(
+    99.99deg,
+    #4693ed -26.21%,
+    #79c2d2 22.16%,
+    rgba(192, 86, 9, 0.49) 111.62%
+  );
+}
+
+/* styles for avatar comp in src/views/Home/componets/Avatars */
+.avatar-icons:nth-child(1),
+.avatar-icons:nth-child(2),
+.avatar-icons:nth-child(3),
+.avatar-icons:nth-child(4),
+.avatar-icons:nth-child(5) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid #78a3ad;
+}
+
+.avatar-icons:nth-child(1) {
+  background-color: aqua;
+  background-image: url(/src/assets/images/avatar-1.png);
+}
+
+.avatar-icons:nth-child(2) {
+  transform: translateX(-20px);
+  background-color: aqua;
+  background-image: url(/src/assets/images/avatar-2.png);
+}
+
+.avatar-icons:nth-child(3) {
+  transform: translateX(-40px);
+  background-color: maroon;
+  background-image: url(/src/assets/images/avatar-3.png);
+}
+
+.avatar-icons:nth-child(4) {
+  transform: translateX(-60px);
+  background-color: chartreuse;
+  background-image: url(/src/assets/images/avatar-4.png);
+}
+
+.avatar-icons:nth-child(5) {
+  transform: translateX(-80px);
+  background-color: midnightblue;
+  background-image: url(/src/assets/images/avatar-5.png);
+}

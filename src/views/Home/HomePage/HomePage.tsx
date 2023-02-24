@@ -1,6 +1,7 @@
 import { Link as RRLink } from 'react-router-dom';
 
 import styles from '@/styles';
+import Avatars from './components/Avatars';
 import products from '@/data/products.json';
 import carouselData from '@/data/carousel.json';
 import { Link, Footer } from '@/components/layout';
@@ -110,7 +111,8 @@ const HomePage = () => {
                   className='flex items-center gap-4 border-b border-b-black w-fit pr-3 pb-2 mb-8
                   lg:border-0  lg:mb-0 lg:p-0'
                 >
-                  avatars
+                  <Avatars />
+
                   <h3 className='font-satoshi font-medium lg:text-2xl'>
                     64 major creators
                   </h3>
