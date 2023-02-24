@@ -7,7 +7,7 @@ import { Link, Footer } from '@/components/layout';
 import creator1 from '@/assets/images/icon-creator-1.png';
 import creator2 from '@/assets/images/icon-creator-2.png';
 import creator3 from '@/assets/images/icon-creator-3.png';
-import arrowOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import arrowOutlinedWhiteIcon from '@/assets/icons/chevron/icon-arrow-right-white.svg';
 import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
 import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
 
@@ -61,19 +61,19 @@ const HomePage = () => {
             >
               <div
                 aria-label='click to see detailed view of this product on the product page'
-                className='relative max-w-full'
+                className='relative w-fit'
               >
-                <div className='min-h-[255px] lg:min-h-[305px] lg:max-w-[610px] bg-indigo-400'>
+                <div className='max-h-[255px] lg:max-h-[305px] lg:max-w-[610px] bg-indigo-400'>
                   {/* Image placeholder */}
                   <img
                     src={product.url}
                     alt=' '
-                    className=' object-cover object-center h-[255px] lg:h-[305px] lg:w-[610px]'
+                    className='object-cover object-center h-[255px] lg:h-[305px] lg:w-[610px]'
                   />
                 </div>
 
                 <div
-                  className='absolute inset-0 z-30 bg-opacity-40 bg-black text-center'
+                  className='opacity-0 hover:opacity-100 absolute inset-0 z-30 bg-opacity-40 bg-black text-center transition-opacity ease-in delay-75 duration-300'
                   aria-hidden
                 >
                   <h1
@@ -83,10 +83,11 @@ const HomePage = () => {
                     Boolean Egyptian
                   </h1>
 
-                  <div className='flex items-center justify-center h-full'>
+                  <div className='flex items-center justify-center h-full gap-4'>
                     <h1 className='font-clash_display text-3xl text-white hidden lg:block'>
                       View product
                     </h1>
+                    <img src={arrowOutlinedWhiteIcon} alt=' ' />
                   </div>
                 </div>
               </div>
