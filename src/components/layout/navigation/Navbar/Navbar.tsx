@@ -6,6 +6,7 @@ import cartIcon from '@/assets/icons/navigation/icon-cart.svg';
 import menuIcon from '@/assets/icons/navigation/icon-menu.svg';
 import searchIcon from '@/assets/icons/navigation/icon-search.svg';
 import Menu from './MobileMenu/Menu';
+import { useCart } from '@/context/CartContext';
 
 const navLinks = [
   { page: 'home', url: '/' },
@@ -24,7 +25,7 @@ const navbarStyles = {
   menu: 'fixed inset-0 z-30 bg-white px-6 py-8',
   menu_header: 'flex items-center justify-between',
   navLink:
-    'text-dark_gray_clr-200 font-satoshi font-medium text-2xl capitalize my-[50px]',
+    'text-dark_gray_clr-200 font-smatoshi font-medium text-2xl capitalize my-[50px]',
   chatIcon: 'absolute bottom-8 right-3',
 };
 
@@ -33,6 +34,8 @@ const Navbar = () => {
 
   const handleOpenMenu = () => setIsMenuOpen(true);
   const handleCloseMenu = () => setIsMenuOpen(false);
+
+  const { cartItems } = useCart();
 
   return (
     <>
@@ -83,6 +86,7 @@ const Navbar = () => {
           <button
             aria-label='click to open view products in cart'
             aria-pressed='false'
+            className='relative'
           >
             <NavLink to='marketplace/cart'>
               <img
@@ -90,6 +94,9 @@ const Navbar = () => {
                 role='presentation'
                 className={navbarStyles.cartIcon}
               />
+              {cartItems.length > 0 ? (
+                <div className='bg-red_clr w-[6px] h-[6px] rounded-full absolute z-30 top-1 right-2'></div>
+              ) : null}
             </NavLink>
           </button>
 
