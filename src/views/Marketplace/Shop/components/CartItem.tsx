@@ -13,7 +13,7 @@ const CartItem = (props: CartItemProps) => {
   const { removeFromCart, increaseCartQuantity, decreaseCartQuantity } =
     useCart();
 
-  const item = productData.products.find((i) => i.id === id);
+  const item = productData.products.find((i) => i.name === id);
   if (item == null) return null;
 
   return (
