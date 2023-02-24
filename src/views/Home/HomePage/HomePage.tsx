@@ -42,6 +42,7 @@ const HomePage = () => {
             .map((image) => (
               <img key={image.id} alt=' ' src={image.url} />
             ))}
+          <span></span>
         </div>
       </section>
 
