@@ -32,7 +32,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
   const increaseCartQuantity = (id: string) => {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === item.id) == null) {
+      if (currItems.find((item) => item.id === id) == null) {
         return [...currItems, { id, quantity: 1 }];
       } else {
         return currItems.map((item) => {
@@ -46,7 +46,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
   const decreaseCartQuantity = (id: string) => {
     setCartItems((currItems) => {
-      if (currItems.find((item) => item.id === item.id)?.quantity == 1) {
+      if (currItems.find((item) => item.id === id)?.quantity == 1) {
         return currItems.filter((item) => item.id !== id);
       } else {
         return currItems.map((item) => {
