@@ -105,13 +105,16 @@ const Navbar = () => {
           <button
             aria-label='click to open view notifications'
             aria-pressed='false'
-            className='hidden lg:block'
+            className='hidden lg:block relative'
           >
-            <img
-              src={bellIcon}
-              role='presentation'
-              className={navbarStyles.bellIcon}
-            />
+            <NavLink to='/drops'>
+              <img
+                src={bellIcon}
+                role='presentation'
+                className={navbarStyles.bellIcon}
+              />
+              <div className='bg-red_clr w-[6px] h-[6px] rounded-full absolute z-30 top-1 right-2'></div>
+            </NavLink>
           </button>
         </div>
       </header>
