@@ -65,19 +65,19 @@ const HomePage = () => {
             >
               <div
                 aria-label='click to see detailed view of this product on the product page'
-                className='relative w-fit'
+                className='relative w-full lg:w-fit'
               >
                 <div className='max-h-[255px] lg:max-h-[305px] lg:max-w-[610px] bg-indigo-400'>
                   {/* Image placeholder */}
                   <img
                     src={product.url}
                     alt=' '
-                    className='object-cover object-center h-[255px] lg:h-[305px] lg:w-[610px]'
+                    className='w-full h-[255px] lg:h-[305px] lg:w-[610px] object-cover object-center'
                   />
                 </div>
 
                 <div
-                  className='opacity-0 hover:opacity-100 absolute inset-0 z-30 bg-opacity-40 bg-black text-center transition-opacity ease-in delay-75 duration-300'
+                  className='lg:opacity-0 lg:hover:opacity-100 absolute inset-0 z-30 bg-opacity-40 bg-black text-center lg:transition-opacity ease-in delay-75 duration-300'
                   aria-hidden
                 >
                   <h1
@@ -87,11 +87,15 @@ const HomePage = () => {
                     Boolean Egyptian
                   </h1>
 
-                  <div className='flex items-center justify-center h-full gap-4'>
+                  <div className='flex flex-col items-end px-8 lg:p-0 lg:flex-row lg:items-center lg:justify-center h-full lg:gap-4'>
                     <h1 className='font-clash_display text-3xl text-white hidden lg:block'>
                       View product
                     </h1>
-                    <img src={arrowOutlinedWhiteIcon} alt=' ' />
+                    <img
+                      src={arrowOutlinedWhiteIcon}
+                      alt=' '
+                      className='mt-10 lg:mt-0'
+                    />
                   </div>
                 </div>
               </div>
