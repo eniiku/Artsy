@@ -74,7 +74,7 @@ const CartItem = (props: CartItemProps) => {
         </button>
 
         <h2 className='font-cardo font-bold text-2xl text-dark_gray_clr-300 lg:text-4xl'>
-          {`$${item.price.usd}`}
+          {`$${item.price.usd * quantity}`}
         </h2>
       </div>
     </div>
