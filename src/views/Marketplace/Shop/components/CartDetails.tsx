@@ -1,5 +1,6 @@
 import { useCart } from '@/context/CartContext';
 import productData from '@/data/products.json';
+import { formatCurrency } from '@/utilities/formatCurrency';
 
 const CartDetails = () => {
   const { cartItems } = useCart();
@@ -18,13 +19,13 @@ const CartDetails = () => {
         Products in cart: <span>{cartItems.length} items</span>
       </li>
       <li className='cart-list'>
-        Shipping: <span>${SHIPPING_FEE}</span>
+        Shipping: <span>{formatCurrency(SHIPPING_FEE)}</span>
       </li>
       <li className='cart-list'>
-        Total <span>${total}</span>
+        Total <span>{formatCurrency(total)}</span>
       </li>
       <li className='cart-list py-5 border-t border-dashed border-light_gray_clr-700 lg:hidden'>
-        Grand total: <span>${total + SHIPPING_FEE}</span>
+        Grand total: <span>${formatCurrency(total + SHIPPING_FEE)}</span>
       </li>
     </ul>
   );

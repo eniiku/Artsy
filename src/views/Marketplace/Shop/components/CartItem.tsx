@@ -1,6 +1,7 @@
 import outlinedCloseIcon from '@/assets/icons/product/icon-close-outline.svg';
 import { useCart } from '@/context/CartContext';
 import productData from '@/data/products.json';
+import { formatCurrency } from '@/utilities/formatCurrency';
 
 interface CartItemProps {
   id: string;
@@ -74,7 +75,7 @@ const CartItem = (props: CartItemProps) => {
         </button>
 
         <h2 className='font-cardo font-bold text-2xl text-dark_gray_clr-300 lg:text-4xl'>
-          {`$${item.price.usd * quantity}`}
+          {formatCurrency(item.price.usd * quantity)}
         </h2>
       </div>
     </div>

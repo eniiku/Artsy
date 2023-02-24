@@ -1,3 +1,5 @@
+import { formatCurrency } from '@/utilities/formatCurrency';
+
 interface MarketItemProps {
   url: string;
   name: string;
@@ -22,7 +24,7 @@ const MarketItem = (props: MarketItemProps) => {
           text-dark_gray_clr-200'
         >
           <h3>{name}</h3>
-          <h3>{`$${price}`}</h3>
+          <h3>{formatCurrency(price)}</h3>
         </div>
       </div>
 
@@ -39,7 +41,9 @@ const MarketItem = (props: MarketItemProps) => {
         <div className='font-satoshi text-dark_gray_clr-200'>
           <h3 className='uppercase font-[22px] mt-2'>{name}</h3>
 
-          <h3 className='font-bold text-[28px] mt-4'>{`$${price}`}</h3>
+          <h3 className='font-bold text-[28px] mt-4'>
+            {formatCurrency(price)}
+          </h3>
         </div>
       </div>
     </>
