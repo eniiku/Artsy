@@ -1,15 +1,16 @@
 import { json, Link as RRLink } from 'react-router-dom';
 
 import styles from '@/styles';
-import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
-import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
-import arrowOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import products from '@/data/products.json';
+import carouselData from '@/data/carousel.json';
+import { Link, Footer } from '@/components/layout';
+import auctionBg from '@assets/images/auction-bg.png';
 import creator1 from '@/assets/images/icon-creator-1.png';
 import creator2 from '@/assets/images/icon-creator-2.png';
 import creator3 from '@/assets/images/icon-creator-3.png';
-import { Link, Footer } from '@/components/layout';
-import carouselData from '@/data/carousel.json';
-import products from '@/data/products.json';
+import arrowOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
+import chevronLeftIcon from '@/assets/icons/chevron/icon-chevron-left-outlined.svg';
+import chevronRightIcon from '@/assets/icons/chevron/icon-chevron-right-outlined.svg';
 
 const HomePage = () => {
   return (
@@ -124,12 +125,11 @@ const HomePage = () => {
 
       <section
         aria-label='showcase of featured auction event'
-        className='-mx-5 my-24 bg-gradient-to-r from-[#466BED] via-[#79C2D2] to-[#c0550957] px-8 py-10 text-white overflow-hidden
+        className='-mx-5 my-24 bg-gradient px-8 py-10 text-white overflow-hidden
           lg:-mx-24 lg:h-[780px] lg:px-20 lg:flex lg:flex-col lg:justify-evenly lg:gap-4'
       >
         <h1 className='hidden lg:block font-satoshi font-medium text-[40px] relative pb-8 w-fit'>
           See Upcoming Auctions and Exhibitions
-          {/* TODO: update arrow icon design */}
           {/* arrow icon  */}
           <span
             aria-hidden
@@ -137,8 +137,7 @@ const HomePage = () => {
           ></span>
         </h1>
 
-        {/* TODO: update background image for section*/}
-        <div className='lg:flex lg:items-end lg:flex-1 lg:border lg:border-black bg-blend-overlay bg-black bg-opacity-50'>
+        <div className='bg-cover bg-center bg-no-repeat bg-[url("/src/assets/images/auction-bg.png")] lg:flex lg:items-end lg:flex-1 bg-blend-overlay bg-black bg-opacity-50'>
           <div className='lg:w-full py-6 px-4 lg:px-10 lg:pb-12 lg:flex lg:justify-between lg:items-end'>
             <div className='lg:flex lg:items-center lg:gap-4 lg:w-3/5'>
               <div className='hidden lg:block font-bellefair text-[67px] text-[#E1E1E1] text-opacity-30'>
@@ -199,7 +198,7 @@ const HomePage = () => {
           <div className='bg-light_gray_clr-500 rounded-full min-w-[290px] min-h-[10px]'>
             <div className='bg-white max-w-[50px] min-h-[10px] rounded-full'></div>
           </div>
-          HTMLDivElement
+
           <div>
             <button
               className='w-[70px] h-[70px] rounded-full text-center bg-white bg-opacity-20 backdrop-blur-lg
