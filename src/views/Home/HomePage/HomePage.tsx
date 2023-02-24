@@ -36,10 +36,12 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className='lg:grid lg:grid-cols-4 lg:gap-8 mt-6 mb-28 lg:mt-32 lg:mb-36'>
-          {carouselData.carousel.map((image) => (
-            <img key={image.id} alt=' ' src={image.url} />
-          ))}
+        <div className='lg:grid lg:grid-cols-4 lg:gap-8 mt-6 mb-24 lg:mt-32 lg:mb-36 carousel-container carousel-images h-[380px] lg:h-auto'>
+          {carouselData.carousel
+            .sort(() => Math.random() - 0.5)
+            .map((image) => (
+              <img key={image.id} alt=' ' src={image.url} />
+            ))}
         </div>
       </section>
 
@@ -57,7 +59,7 @@ const HomePage = () => {
           {products.featured_products.map((product) => (
             <RRLink
               key={product.id}
-              to={`/marketplace/boolean-egyptian`}
+              to={`/marketplace/boolean egyptian`}
               className='lg:grid lg:grid-cols-2 gap-8 lg:border-t-[0.5px] lg:border-dark_gray_clr-200 lg:py-16 cursor-pointer w-fit reverse'
             >
               <div
