@@ -1,10 +1,9 @@
-import { json, Link as RRLink } from 'react-router-dom';
+import { Link as RRLink } from 'react-router-dom';
 
 import styles from '@/styles';
 import products from '@/data/products.json';
 import carouselData from '@/data/carousel.json';
 import { Link, Footer } from '@/components/layout';
-import auctionBg from '@assets/images/auction-bg.png';
 import creator1 from '@/assets/images/icon-creator-1.png';
 import creator2 from '@/assets/images/icon-creator-2.png';
 import creator3 from '@/assets/images/icon-creator-3.png';
@@ -180,11 +179,11 @@ const HomePage = () => {
 
             <div className='flex items-center justify-end gap-8'>
               <button className='font-satoshi text-sm underline underline-offset-2 lg:text-2xl lg:underline-offset-8'>
-                See more
+                <RRLink to='/auctions'>See more</RRLink>
               </button>
 
               <button className='font-satoshi text-sm border px-2 py-2 rounded-[10px] lg:text-2xl lg:px-3 lg:py-3'>
-                Set a reminder
+                <RRLink to='/drops'>Set a reminder</RRLink>
               </button>
             </div>
           </div>
