@@ -18,19 +18,7 @@ const MarketItemDetails = () => {
       </div>
 
       {/* Product Details Card */}
-      {ProductData.products
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 1)
-        .map((item) => (
-          <MarketItemCard
-            url={item.url}
-            name={item.name}
-            price={item.price.eth}
-            creator={item.creator}
-            origin={item.origin}
-            id={item.id}
-          />
-        ))}
+      <MarketItemCard id={id!} />
 
       {/* Explore more */}
       <div className='font-satoshi font-medium mb-64 lg:m-0 lg:o-0'>

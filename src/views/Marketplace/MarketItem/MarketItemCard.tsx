@@ -1,3 +1,4 @@
+import productData from '@/data/products.json';
 import { useCart } from '@/context/CartContext';
 import MarketItem from '../MarketItem/MarketItem';
 import ethIcon from '@/assets/icons/product/ethereum.svg';
@@ -6,20 +7,19 @@ import chevronDownIcon from '@/assets/icons/chevron/icon-chevron-down-outlined.s
 import arrowRightOutlinedIcon from '@/assets/icons/chevron/icon-arrow-right-outlined.svg';
 
 interface MarketItemCardProps {
-  url: string;
-  name: string;
-  price: number;
-  creator: string;
-  origin: string;
   id: string;
 }
 
 const MarketItemCard = (props: MarketItemCardProps) => {
-  const { url, name, price, origin, creator, id } = props;
+  const { id } = props;
 
   const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
     useCart();
+
   const quantity = getItemQuantity(id);
+
+  const item = productData.products.find((i) => i.name === id);
+  if (item == null) return null;
 
   return (
     <div
@@ -32,7 +32,7 @@ const MarketItemCard = (props: MarketItemCardProps) => {
         {/* Image Mobile View */}
 
         <div className='lg:hidden'>
-          <MarketItem url={url} name={name} price={price} />
+          <MarketItem url={item.url} name={item.name} price={item.price.eth} />
         </div>
 
         {/* image Desktop view */}
@@ -40,7 +40,7 @@ const MarketItemCard = (props: MarketItemCardProps) => {
         <div className='hidden lg:block py-8 px-4 border-r border-dark_gray_clr-200 h-full'>
           <div className='bg-indigo-300 w-full h-full'>
             <img
-              src={url}
+              src={item.url}
               alt=' '
               className='w-full h-full object-cover object-center'
             />
@@ -56,13 +56,13 @@ const MarketItemCard = (props: MarketItemCardProps) => {
             items-center justify-between px-8 py-10'
         >
           <h3 className='font-satoshi font-bold text-[46px] capitalize'>
-            {name}
+            {item.name}
           </h3>
 
           <div className='flex gap-[10px] items-center'>
             <img src={ethIcon} role='presentation' className='h-[40px]' />
             <h3 className='font-stix font-medium text-[40px] text-center'>
-              {price}
+              {item.price.eth}
             </h3>
           </div>
         </div>
@@ -71,11 +71,11 @@ const MarketItemCard = (props: MarketItemCardProps) => {
           <ul>
             <li className='mt-5 text-black lg:text-3xl lg:mt-0'>
               Creator:{' '}
-              <span className=' text-[#006CA2] capitalize'>{creator}</span>
+              <span className=' text-[#006CA2] capitalize'>{item.creator}</span>
             </li>
 
             <li className='mt-5 text-light_gray_clr-700 lg:text-black lg:text-2xl lg:mt-8 capitalize'>
-              {origin}
+              {item.origin}
             </li>
 
             <li className='mt-5 text-light_gray_clr-700 lg:text-black lg:text-[28px] lg:my-8'>
