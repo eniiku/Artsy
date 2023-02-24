@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+
 interface CartProviderProps {
   children: React.ReactNode;
 }
@@ -24,7 +26,7 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [cartItems, setCartItems] = React.useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('cart', []);
 
   const getItemQuantity = (id: string) => {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
