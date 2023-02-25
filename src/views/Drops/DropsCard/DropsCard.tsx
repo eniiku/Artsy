@@ -7,16 +7,31 @@ interface DropsCardProps {
     time: string;
     timezone: string;
   };
+  url: string;
+  status: string;
 }
 
 const DropsCard = (props: DropsCardProps) => {
-  const { creator, title, date } = props;
+  const { creator, title, date, url, status } = props;
 
   return (
-    <div className='lg:flex gap-8'>
-      <div className='min-h-[225px] lg:min-w-[680px] lg:min-h-[440px] rounded-[10px] bg-green-700 relative font-stix'>
-        <div className='lg:hidden font-medium bg-blue_clr-500 text-white text-xs px-6 py-1 absolute right-3 top-3 rounded-md uppercase '>
-          upcoming
+    <div className='lg:flex gap-8 h-[225px] lg:h-[440px]'>
+      <div className='h-[225px] lg:min-w-[680px] lg:h-[440px] rounded-[10px] bg-green-700  relative font-stix'>
+        <img
+          src={url}
+          alt=' '
+          className='absolute inset-0 object-cover object-center w-full h-[225px] lg:w-[680px] lg:h-[440px] rounded-[10px]'
+        />
+        <div
+          className={`lg:hidden font-inter font-medium text-white text-xs px-6 py-1 absolute right-3 top-3 rounded-md uppercase ${
+            status === 'upcoming'
+              ? 'bg-blue_clr-500'
+              : status === 'live now'
+              ? 'bg-[#3EA03B]'
+              : 'bg-[#999EA5]'
+          }`}
+        >
+          {status}
         </div>
 
         <div className='bg-[#F5F4F4] bg-opacity-30 absolute bottom-3 left-3 right-3 lg:left-6 lg:right-6 rounded-[10px] py-2 px-6 lg:px-10 lg:py-4 text-white lg:flex items-end justify-between'>
@@ -34,9 +49,17 @@ const DropsCard = (props: DropsCardProps) => {
         </div>
       </div>
 
-      <div className='font-satoshi mt-4 lg:text-xl lg:mt-0 lg:flex lg:flex-col lg:justify-between lg:items-start'>
-        <div className='hidden lg:block uppercase bg-blue_clr-500 px-8 py-2 rounded-lg w-fit text-lg text-white'>
-          upcoming
+      <div className='font-satoshi h-full mt-4 lg:text-xl lg:mt-0 lg:flex lg:flex-col lg:justify-between lg:items-start'>
+        <div
+          className={`hidden lg:block uppercase px-14 py-2 rounded-[10px] w-fit font-inter font-medium text-lg text-white ${
+            status === 'upcoming'
+              ? 'bg-blue_clr-500'
+              : status === 'live now'
+              ? 'bg-[#3EA03B]'
+              : 'bg-[#999EA5]'
+          }`}
+        >
+          {status}
         </div>
 
         <h3 className='first-letter:uppercase'>{`${date.month} ${date.day} at ${date.time} ${date.timezone}`}</h3>

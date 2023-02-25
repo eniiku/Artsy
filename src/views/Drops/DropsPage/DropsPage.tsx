@@ -34,13 +34,15 @@ const DropsPage = () => {
       </div>
 
       {/* Drops Card Section */}
-      <ul className='mt-16'>
+      <ul className='mt-16 flex flex-col items-center'>
         {dropsData.map((item) => (
           <li key={item.id} className='mb-14 lg:mb-28'>
             <DropsCard
               creator={item.creator}
               date={item.date}
               title={item.title}
+              url={item.url}
+              status={item.status}
             />
           </li>
         ))}
