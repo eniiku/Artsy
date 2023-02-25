@@ -9,7 +9,7 @@ const LiveCard = (props: LiveCardProps) => {
       <img
         src={url}
         alt=' '
-        className='object-center object-cover rounded-2xl'
+        className='w-[230px] h-[190px] lg:w-[490px] lg:h-[390px] object-center object-cover rounded-2xl max-w-max'
       />
       <div
         className=' w-[90%] absolute py-3 bg-[#F5F4F4] bg-opacity-25 rounded-lg
