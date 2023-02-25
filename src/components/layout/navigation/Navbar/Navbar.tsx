@@ -88,14 +88,14 @@ const Navbar = () => {
             aria-pressed='false'
             className='relative'
           >
-            <NavLink to='marketplace/cart'>
+            <NavLink to={cartItems.length > 0 ? 'marketplace/cart' : ''}>
               <img
                 src={cartIcon}
                 role='presentation'
                 className={navbarStyles.cartIcon}
               />
               {cartItems.length > 0 ? (
-                <div className='bg-red_clr w-[6px] h-[6px] rounded-full absolute z-30 top-1 right-2'></div>
+                <div className='bg-red_clr w-1 h-1 lg:w-[6px] lg:h-[6px] rounded-full absolute z-30 top-1 right-1 lg:right-2'></div>
               ) : null}
             </NavLink>
           </button>
