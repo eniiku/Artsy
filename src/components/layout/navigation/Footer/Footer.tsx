@@ -18,7 +18,7 @@ const Footer = () => {
         </h1>
 
         <p
-          className='font-satoshi text-xs mt-3 uppercase lg:text-[32px] md:text-center 
+          className='font-satoshi text-xs mt-3 uppercase lg:text-[32px] lg:leading-[1.5] md:text-center 
           lg:normal-case md:mt-6'
         >
           Subscribe to get daily updates on new drops & exciting deals
