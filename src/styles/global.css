@@ -206,9 +206,9 @@
   }
 
   .carousel-images img:nth-child(2) {
-    rotate: -9deg;
+    transform: rotate(-9deg);
   }
   .carousel-images img:nth-child(3) {
-    rotate: 9deg;
+    transform: rotate(9deg);
   }
 }
