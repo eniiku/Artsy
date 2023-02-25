@@ -5,11 +5,11 @@ interface LiveCardProps {
 const LiveCard = (props: LiveCardProps) => {
   const { url } = props;
   return (
-    <div className='max-w-[230px] max-h-[190px] rounded-2xl bg-purple-700 relative lg:max-w-[490px] lg:max-h-[400px]'>
+    <div className='w-[230px] max-h-[190px] rounded-2xl bg-purple-700 relative lg:w-[490px] lg:max-h-[400px]'>
       <img
         src={url}
         alt=' '
-        className='w-[230px] h-[190px] lg:w-[490px] lg:h-[390px] object-center object-cover rounded-2xl max-w-max'
+        className='w-full h-[190px] lg:w-[490px] lg:h-[390px] object-center object-cover rounded-2xl'
       />
       <div
         className=' w-[90%] absolute py-3 bg-[#F5F4F4] bg-opacity-25 rounded-lg

@@ -1,4 +1,10 @@
 import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import styles from '@/styles';
 import auctionData from '@/data/auction.json';
@@ -18,20 +24,27 @@ const AuctionPage = () => {
 
       {/* Live Auction */}
 
-      <div className='my-10 lg:my-20'>
+      <div className='mt-10 lg:my-20'>
         <p className='lg:text-[28px] lg:mb-24'>
           Here’s an overview of products actively on auction, explore!
         </p>
 
-        <ul className='flex gap-12 overflow-hidden my-12'>
+        <Swiper
+          pagination={true}
+          navigation={true}
+          slidesPerView={'auto'}
+          spaceBetween={30}
+          modules={[Pagination, Navigation]}
+          className='mySwiper flex gap-12 overflow-hidden my-12 pb-12'
+        >
           {auctionData.products.map((product) => (
-            <li key={product.id}>
+            <SwiperSlide key={product.id} className='w-fit'>
               <Link to={`live/${product.id}`}>
                 <LiveCard url={product.url} />
               </Link>
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       </div>
 
       <div className='my-10 lg:mb-40'>
