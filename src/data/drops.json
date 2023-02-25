@@ -8,7 +8,9 @@
       "month": "november",
       "time": "11am",
       "timezone": "WAT"
-    }
+    },
+    "url": "https://images.unsplash.com/photo-1665994658139-ba312e2bf060?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8YWxsfDI0fHx8fHx8Mnx8MTY2NjAwOTg4Mg&ixlib=rb-1.2.1&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    "status": "upcoming"
   },
   {
     "id": "d2",
@@ -19,7 +21,9 @@
       "month": "november",
       "time": "11am",
       "timezone": "WAT"
-    }
+    },
+    "url": "https://images.unsplash.com/photo-1665999374348-25dae66e4a06?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8YWxsfDM1fHx8fHx8Mnx8MTY2NjAwOTg3Mg&ixlib=rb-1.2.1&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    "status": "live now"
   },
   {
     "id": "d3",
@@ -30,7 +34,9 @@
       "month": "november",
       "time": "11am",
       "timezone": "WAT"
-    }
+    },
+    "url": "https://images.unsplash.com/photo-1665597652829-bf80107d7045?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8YWxsfDQwMHx8fHx8fDJ8fDE2NjYwMDk4NzM&ixlib=rb-1.2.1&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    "status": "ended"
   },
   {
     "id": "d4",
@@ -41,6 +47,8 @@
       "month": "november",
       "time": "11am",
       "timezone": "WAT"
-    }
+    },
+    "url": "https://images.unsplash.com/photo-1667337395744-7d6d829438e0?crop=entropy&cs=tinysrgb&fm=jpg&ixid=Mnw3MjAxN3wwfDF8YWxsfDEyOHx8fHx8fDJ8fDE2Njc1NzU5MzU&ixlib=rb-4.0.3&q=80&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    "status": "ended"
   }
 ]
