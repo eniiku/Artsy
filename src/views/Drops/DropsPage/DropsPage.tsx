@@ -12,7 +12,7 @@ const DropsPage = () => {
         <Breadcrumbs />
       </div>
 
-      <div className='text-center'>
+      <div className='text-center mt-3'>
         <h1 className='font-bold text-3xl lg:text-5xl'>Upcoming drops</h1>
 
         <p className='text-lg lg:text-[32px] w-[80%] my-4 lg:my-12 mx-auto text-light_gray_clr-700'>
@@ -34,7 +34,7 @@ const DropsPage = () => {
       </div>
 
       {/* Drops Card Section */}
-      <ul className='mt-16 flex flex-col items-center'>
+      <ul className='mt-8 lg:mt-16 flex flex-col items-center'>
         {dropsData.map((item) => (
           <li key={item.id} className='mb-14 lg:mb-28'>
             <DropsCard

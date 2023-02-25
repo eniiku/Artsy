@@ -15,7 +15,7 @@ const DropsCard = (props: DropsCardProps) => {
   const { creator, title, date, url, status } = props;
 
   return (
-    <div className='lg:flex gap-8 h-[225px] lg:h-[440px]'>
+    <div className='lg:flex gap-8'>
       <div className='h-[225px] lg:min-w-[680px] lg:h-[440px] rounded-[10px] bg-green-700  relative font-stix'>
         <img
           src={url}
@@ -49,7 +49,7 @@ const DropsCard = (props: DropsCardProps) => {
         </div>
       </div>
 
-      <div className='font-satoshi h-full mt-4 lg:text-xl lg:mt-0 lg:flex lg:flex-col lg:justify-between lg:items-start'>
+      <div className='font-satoshi mt-4 lg:text-xl lg:mt-0 lg:flex lg:flex-col lg:justify-between lg:items-start'>
         <div
           className={`hidden lg:block uppercase px-14 py-2 rounded-[10px] w-fit font-inter font-medium text-lg text-white ${
             status === 'upcoming'
