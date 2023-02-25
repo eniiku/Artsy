@@ -1,16 +1,16 @@
 import likeIcon from '@/assets/icons/product/icon-like.svg';
 
 interface BidsCardProps {
-  url: string | undefined;
-  price: number | undefined;
-  creator: string;
+  url: string;
   date: {
     day: number;
     month: number;
     year: number;
   };
-  bid: number;
   text: string;
+  creator: string;
+  currentPrice: number;
+  highestPrice: number;
 }
 
 const styles = {
@@ -18,7 +18,7 @@ const styles = {
 };
 
 const BidsCard = (props: BidsCardProps) => {
-  const { url, text, price, creator, date, bid } = props;
+  const { url, text, creator, date, currentPrice, highestPrice } = props;
 
   return (
     <div>
@@ -35,15 +35,17 @@ const BidsCard = (props: BidsCardProps) => {
           </div>
         </div>
 
-        <img
-          className='max-h-[185px] bg-yellow-400 rounded-lg my-2 lg:max-h-[280px] lg:my-4 lg:-mx-6 w-full'
-          src={url}
-          alt=' '
-        />
+        <div className='lg:-mx-5'>
+          <img
+            className='max-h-[185px] bg-yellow-400 rounded-lg my-2 lg:max-h-[280px] lg:my-4 w-full object-cover object-center'
+            src={url}
+            alt=' '
+          />
+        </div>
 
         <div className='font-satoshi font-bold text-xl flex items-center justify-between lg:text-[40px] lg:my-6'>
           <h3 className='first-letter:uppercase'>{text}</h3>
-          <h3 className='lg:hidden'>{`${price} ETH`}</h3>
+          <h3 className='lg:hidden'>{`${highestPrice} ETH`}</h3>
         </div>
       </div>
 
@@ -66,7 +68,7 @@ const BidsCard = (props: BidsCardProps) => {
 
         <li className='hidden lg:block mt-[30px] lg:my-[60px]'>
           Highest bid:{' '}
-          <span className='font-bold lg:text-3xl'>{`${bid} ETH`}</span>
+          <span className='font-bold lg:text-3xl'>{`${highestPrice} ETH`}</span>
         </li>
       </ul>
 
@@ -79,11 +81,11 @@ const BidsCard = (props: BidsCardProps) => {
         <div className='flex flex-col justify-between font-bold gap-4 text-xl lg:text-3xl lg:gap-8'>
           <h3 className='text-light_gray_clr-700'>Current bid</h3>
 
-          <h3 className='text-dark_gray_clr-200'>{price} ETH</h3>
+          <h3 className='text-dark_gray_clr-200'>{currentPrice} ETH</h3>
         </div>
 
         <button
-          className='font-medium text-white bg-blue_clr-700 px-12 py-3 rounded-sm lg:text-[25px]
+          className='font-medium text-white bg-blue_clr-700 px-10 py-3 rounded-sm lg:text-[25px]
           lg:px-20 lg:py-6'
         >
           Place bid

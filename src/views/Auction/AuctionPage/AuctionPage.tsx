@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
+
 import styles from '@/styles';
 import auctionData from '@/data/auction.json';
 import LiveCard from '../components/LiveCard/LiveCard';
 import BidsCard from '../components/BidsCard/BidsCard';
 import arrowRightIcon from '@/assets/icons/chevron/icon-arrow-right.svg';
 import Breadcrumbs from '@/components/layout/navigation/Breadcrumbs/Breadcrumbs';
-import { Link } from 'react-router-dom';
 
 const AuctionPage = () => {
   return (
@@ -34,7 +35,7 @@ const AuctionPage = () => {
       </div>
 
       <div className='my-10 lg:mb-40'>
-        <h3 className='lg:font-bold lg:text-4xl lg:mb-24'>
+        <h3 className='lg:font-bold lg:text-4xl lg:mb-16'>
           Top bids from popular creators
         </h3>
 
@@ -44,10 +45,10 @@ const AuctionPage = () => {
               <BidsCard
                 url={product.url}
                 text={product.name}
-                price={product.bid.current?.eth}
+                currentPrice={product.bid.current.eth}
+                highestPrice={product.bid.highest.eth}
                 creator={product.creator}
                 date={product.date}
-                bid={product.bid.highest.eth}
               />
             </li>
           ))}
